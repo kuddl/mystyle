@@ -1,0 +1,208 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1680" height="1180" viewBox="0 0 1680 1180">
+  <defs>
+    <!-- Background Gradient -->
+    <radialGradient id="canvas-glow" cx="50%" cy="0%" r="80%">
+      <stop offset="0%" stop-color="#141420"/>
+      <stop offset="60%" stop-color="#09090B"/>
+      <stop offset="100%" stop-color="#050507"/>
+    </radialGradient>
+
+    <!-- Axolotl Gradient -->
+    <linearGradient id="axo-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FF85B8"/>
+      <stop offset="35%" stop-color="#5E26F6"/>
+      <stop offset="70%" stop-color="#56B7EC"/>
+      <stop offset="100%" stop-color="#6AE5B5"/>
+    </linearGradient>
+
+    <linearGradient id="pixel-badge-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#221D3A"/>
+      <stop offset="100%" stop-color="#111118"/>
+    </linearGradient>
+
+    <filter id="subtle-glow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1680" height="1180" fill="url(#canvas-glow)"/>
+
+  <!-- Top Hero Header -->
+  <g transform="translate(60, 55)">
+    <!-- Header with Geist Pixel Square / Departure Mono -->
+    <text x="0" y="32" fill="#F4F4F6" font-family="Departure Mono, monospace" font-size="32" font-weight="bold" letter-spacing="1">AXOLOTL // TYPOGRAPHY SHOWCASE</text>
+    <text x="0" y="60" fill="#71717A" font-family="GeistMono Nerd Font, Monaspace Neon NF, monospace" font-size="14">Curated Monospace Nerd Fonts &amp; Blocky Pixel Accent Fonts · Paired with Axolotl Palette</text>
+
+    <!-- Color Accent Line -->
+    <rect x="0" y="76" width="1560" height="3" rx="1.5" fill="url(#axo-grad)"/>
+  </g>
+
+  <!-- =========================================================================
+       COLUMN 1: BLOCKY PIXEL ACCENT FONTS (Headlines, Badges, Banners)
+       ========================================================================= -->
+  <g transform="translate(60, 160)">
+    <!-- Section Title -->
+    <rect x="0" y="0" width="760" height="970" rx="16" fill="#0C0C11" stroke="#22222E" stroke-width="1.5"/>
+    <rect x="2" y="2" width="756" height="4" rx="2" fill="#5E26F6"/>
+
+    <g transform="translate(32, 36)">
+      <text x="0" y="0" fill="#FF85B8" font-family="Silkscreen, monospace" font-size="13" font-weight="bold" letter-spacing="2">01. PIXEL ACCENT FONTS (HEADLINES &amp; BADGES)</text>
+      <text x="0" y="22" fill="#71717A" font-family="GeistMono Nerd Font, monospace" font-size="12">Scharfe, blockige Pixel-Fonts für TUI-Header, HUD-Elemente, Dialoge und Banners</text>
+
+      <!-- 1. DEPARTURE MONO -->
+      <g transform="translate(0, 52)">
+        <rect x="0" y="0" width="696" height="155" rx="10" fill="#111118" stroke="#262636" stroke-width="1.2"/>
+        <rect x="14" y="14" width="135" height="22" rx="4" fill="#1C182E" stroke="#5E26F6" stroke-width="1"/>
+        <text x="81" y="29" fill="#9E7BFF" font-family="Departure Mono, monospace" font-size="11" text-anchor="middle">DEPARTURE MONO</text>
+        <text x="160" y="29" fill="#71717A" font-family="GeistMono Nerd Font, monospace" font-size="11">Retro-Futuristic Tech / Airport Board Style</text>
+
+        <!-- Big Headline Specimen -->
+        <text x="20" y="72" fill="#6AE5B5" font-family="Departure Mono, monospace" font-size="24" letter-spacing="1">EASING WIZARD // CUBIC BEZIER</text>
+        <text x="20" y="102" fill="#F4F4F6" font-family="Departure Mono, monospace" font-size="16">STATUS: 200 OK  [AXOLOTL.OBSIDIAN]  CPU: 12%</text>
+        <text x="20" y="132" fill="#56B7EC" font-family="Departure Mono, monospace" font-size="13">0123456789  !@#$%^&amp;*()_+-=  {}[]&lt;&gt;  ~/code/mystyle</text>
+      </g>
+
+      <!-- 2. GEIST PIXEL SQUARE -->
+      <g transform="translate(0, 222)">
+        <rect x="0" y="0" width="696" height="155" rx="10" fill="#111118" stroke="#262636" stroke-width="1.2"/>
+        <rect x="14" y="14" width="155" height="22" rx="4" fill="#162422" stroke="#6AE5B5" stroke-width="1"/>
+        <text x="91" y="29" fill="#6AE5B5" font-family="Departure Mono, monospace" font-size="11" text-anchor="middle">GEIST PIXEL SQUARE</text>
+        <text x="180" y="29" fill="#71717A" font-family="GeistMono Nerd Font, monospace" font-size="11">Vercel Clean Block Pixel UI Headline Font</text>
+
+        <!-- Big Headline Specimen -->
+        <text x="20" y="72" fill="#F4F4F6" font-family="Geist Pixel Square, monospace" font-size="24" letter-spacing="1">RAYCAST THEME SWITCHER</text>
+        <text x="20" y="102" fill="#FF85B8" font-family="Geist Pixel Square, monospace" font-size="16">SELECT FLAVOR: NATTY CYBER-MINT</text>
+        <text x="20" y="132" fill="#6AE5B5" font-family="Geist Pixel Square, monospace" font-size="13">ABCDEFGH JKLMNOPQ RSTUVWXYZ 0123456789</text>
+      </g>
+
+      <!-- 3. GEIST PIXEL GRID -->
+      <g transform="translate(0, 392)">
+        <rect x="0" y="0" width="696" height="155" rx="10" fill="#111118" stroke="#262636" stroke-width="1.2"/>
+        <rect x="14" y="14" width="140" height="22" rx="4" fill="#14212D" stroke="#56B7EC" stroke-width="1"/>
+        <text x="84" y="29" fill="#56B7EC" font-family="Departure Mono, monospace" font-size="11" text-anchor="middle">GEIST PIXEL GRID</text>
+        <text x="165" y="29" fill="#71717A" font-family="GeistMono Nerd Font, monospace" font-size="11">Dotted Matrix / LED Display Vibe</text>
+
+        <!-- Big Headline Specimen -->
+        <text x="20" y="72" fill="#56B7EC" font-family="Geist Pixel Grid, monospace" font-size="24" letter-spacing="2">LED MATRIX HUD DISPLAY</text>
+        <text x="20" y="102" fill="#F3F99D" font-family="Geist Pixel Grid, monospace" font-size="16">ACTIVE SESSION: PI AGENT (HERMES)</text>
+        <text x="20" y="132" fill="#A1A1AA" font-family="Geist Pixel Grid, monospace" font-size="13">SYSTEM READY // 16 CORES // MEMORY 64GB</text>
+      </g>
+
+      <!-- 4. SILKSCREEN -->
+      <g transform="translate(0, 562)">
+        <rect x="0" y="0" width="696" height="155" rx="10" fill="#111118" stroke="#262636" stroke-width="1.2"/>
+        <rect x="14" y="14" width="110" height="22" rx="4" fill="#2A1728" stroke="#FF85B8" stroke-width="1"/>
+        <text x="69" y="29" fill="#FF85B8" font-family="Departure Mono, monospace" font-size="11" text-anchor="middle">SILKSCREEN</text>
+        <text x="135" y="29" fill="#71717A" font-family="GeistMono Nerd Font, monospace" font-size="11">Geometrisch-blockig für Pill-Badges &amp; Caps</text>
+
+        <!-- Big Headline Specimen -->
+        <text x="20" y="72" fill="#FF85B8" font-family="Silkscreen, monospace" font-size="22" letter-spacing="1">BEZIER SPRING BOUNCE WIGGLE</text>
+        <text x="20" y="102" fill="#6AE5B5" font-family="Silkscreen, monospace" font-size="15">PREVIEW: NORMAL MODE // TS 5.8 // AXOLOTL</text>
+        <text x="20" y="132" fill="#F4F4F6" font-family="Silkscreen, monospace" font-size="12">HIGH-PRECISION CSS EASING GENERATOR 2026</text>
+      </g>
+
+      <!-- 5. MONOCRAFT NERD FONT -->
+      <g transform="translate(0, 732)">
+        <rect x="0" y="0" width="696" height="155" rx="10" fill="#111118" stroke="#262636" stroke-width="1.2"/>
+        <rect x="14" y="14" width="170" height="22" rx="4" fill="#202213" stroke="#F3F99D" stroke-width="1"/>
+        <text x="99" y="29" fill="#F3F99D" font-family="Departure Mono, monospace" font-size="11" text-anchor="middle">MONOCRAFT NERD FONT</text>
+        <text x="195" y="29" fill="#71717A" font-family="GeistMono Nerd Font, monospace" font-size="11">Vollwertige Blocky-Coding-Font mit Nerd Icons</text>
+
+        <!-- Big Headline Specimen -->
+        <text x="20" y="70" fill="#F3F99D" font-family="Monocraft, monospace" font-size="20">const curve = [mint, blue, violet];</text>
+        <text x="20" y="100" fill="#6AE5B5" font-family="Monocraft, monospace" font-size="15">git commit -m "feat: axolotl suite"</text>
+        <text x="20" y="130" fill="#9E7BFF" font-family="Monocraft, monospace" font-size="12">Terminal &amp; Code fähig mit Ligaturen: ==&gt; &gt;= !=</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- =========================================================================
+       COLUMN 2: MONOSPACE NERD FONTS (Code, TUI, Terminal)
+       ========================================================================= -->
+  <g transform="translate(860, 160)">
+    <rect x="0" y="0" width="760" height="970" rx="16" fill="#0C0C11" stroke="#22222E" stroke-width="1.5"/>
+    <rect x="2" y="2" width="756" height="4" rx="2" fill="#6AE5B5"/>
+
+    <g transform="translate(32, 36)">
+      <text x="0" y="0" fill="#6AE5B5" font-family="Departure Mono, monospace" font-size="13" font-weight="bold" letter-spacing="2">02. MONOSPACE NERD FONTS (CODE &amp; TERMINAL)</text>
+      <text x="0" y="22" fill="#71717A" font-family="GeistMono Nerd Font, monospace" font-size="12">Installierte Fonts für Ghostty, VS Code, Lazygit, Lazydocker &amp; Pi</text>
+
+      <!-- 1. MONASPACE NEON + RADON -->
+      <g transform="translate(0, 52)">
+        <rect x="0" y="0" width="696" height="155" rx="10" fill="#09090B" stroke="#22222E" stroke-width="1.2"/>
+        <rect x="14" y="12" width="220" height="22" rx="4" fill="#162422" stroke="#6AE5B5" stroke-width="1"/>
+        <text x="124" y="27" fill="#6AE5B5" font-family="Departure Mono, monospace" font-size="11" text-anchor="middle">MONASPACE NEON + RADON</text>
+        <text x="245" y="27" fill="#71717A" font-family="GeistMono Nerd Font, monospace" font-size="11">Neo-Grotesque + Texture Healing</text>
+
+        <g transform="translate(18, 56)" font-size="13" font-family="Monaspace Neon NF, monospace">
+          <text x="0" y="16" fill="#636A7E" font-family="Monaspace Radon NF, monospace" font-style="italic">// Texture-Healing: Neon (code) + Radon (script cursive)</text>
+          <text x="0" y="38"><tspan fill="#FF85B8">export function</tspan> <tspan fill="#56B7EC">easeWizard</tspan><tspan fill="#F4F4F6">(</tspan><tspan fill="#F4F4F6">t</tspan><tspan fill="#FF85B8">:</tspan> <tspan fill="#9E7BFF">number</tspan><tspan fill="#F4F4F6">)</tspan><tspan fill="#FF85B8">:</tspan> <tspan fill="#9E7BFF">number</tspan> <tspan fill="#F4F4F6">{</tspan></text>
+          <text x="20" y="60"><tspan fill="#FF85B8">return</tspan> <tspan fill="#F4F4F6">t &lt;</tspan> <tspan fill="#F3F99D">0.5</tspan> <tspan fill="#FF85B8">?</tspan> <tspan fill="#F3F99D">4</tspan> <tspan fill="#FF85B8">*</tspan> <tspan fill="#F4F4F6">t **</tspan> <tspan fill="#F3F99D">3</tspan> <tspan fill="#FF85B8">:</tspan> <tspan fill="#F3F99D">1</tspan> <tspan fill="#FF85B8">-</tspan> <tspan fill="#F4F4F6">((-2 * t + 2) ** 3) / 2;</tspan></text>
+          <text x="0" y="82" fill="#F4F4F6">}</text>
+        </g>
+      </g>
+
+      <!-- 2. GEIST MONO NERD FONT -->
+      <g transform="translate(0, 222)">
+        <rect x="0" y="0" width="696" height="155" rx="10" fill="#09090B" stroke="#22222E" stroke-width="1.2"/>
+        <rect x="14" y="12" width="180" height="22" rx="4" fill="#14212D" stroke="#56B7EC" stroke-width="1"/>
+        <text x="104" y="27" fill="#56B7EC" font-family="Departure Mono, monospace" font-size="11" text-anchor="middle">GEISTMONO NERD FONT</text>
+        <text x="205" y="27" fill="#71717A" font-family="GeistMono Nerd Font, monospace" font-size="11">Vercel Dark-UI Aesthetic (1:1 Easing Wizard)</text>
+
+        <g transform="translate(18, 56)" font-size="13" font-family="GeistMono Nerd Font, monospace">
+          <text x="0" y="16" fill="#6E7185">// Ultra-clean, geometrisch, perfekte Lesbarkeit</text>
+          <text x="0" y="38"><tspan fill="#FF85B8">const</tspan> <tspan fill="#F4F4F6">palette</tspan> <tspan fill="#FF85B8">=</tspan> <tspan fill="#F4F4F6">{</tspan> <tspan fill="#56B7EC">mint</tspan><tspan fill="#FF85B8">:</tspan> <tspan fill="#6AE5B5">'#6AE5B5'</tspan><tspan fill="#F4F4F6">,</tspan> <tspan fill="#56B7EC">pink</tspan><tspan fill="#FF85B8">:</tspan> <tspan fill="#FF85B8">'#FF85B8'</tspan> <tspan fill="#F4F4F6">};</tspan></text>
+          <text x="0" y="60"><tspan fill="#FF85B8">if</tspan> <tspan fill="#F4F4F6">(activeTheme</tspan> <tspan fill="#FF85B8">===</tspan> <tspan fill="#6AE5B5">'axolotl-obsidian'</tspan><tspan fill="#F4F4F6">)</tspan> <tspan fill="#56B7EC">applyTheme</tspan><tspan fill="#F4F4F6">(palette);</tspan></text>
+          <text x="0" y="82" fill="#A1A1AA">Ligatures test: &lt;= &gt;= === !== =&gt; -&gt; !=</text>
+        </g>
+      </g>
+
+      <!-- 3. MONASPACE KRYPTON NF -->
+      <g transform="translate(0, 392)">
+        <rect x="0" y="0" width="696" height="155" rx="10" fill="#09090B" stroke="#22222E" stroke-width="1.2"/>
+        <rect x="14" y="12" width="180" height="22" rx="4" fill="#221D3A" stroke="#9E7BFF" stroke-width="1"/>
+        <text x="104" y="27" fill="#9E7BFF" font-family="Departure Mono, monospace" font-size="11" text-anchor="middle">MONASPACE KRYPTON NF</text>
+        <text x="205" y="27" fill="#71717A" font-family="GeistMono Nerd Font, monospace" font-size="11">Mechanical &amp; Sci-Fi Kantig</text>
+
+        <g transform="translate(18, 56)" font-size="13" font-family="Monaspace Krypton NF, monospace">
+          <text x="0" y="16" fill="#636A7E">// Mechanische Kanten – passt genial zu Pixel-Headlines</text>
+          <text x="0" y="38"><tspan fill="#FF85B8">interface</tspan> <tspan fill="#9E7BFF">AxolotlFlavor</tspan> <tspan fill="#F4F4F6">{</tspan> <tspan fill="#F4F4F6">id</tspan><tspan fill="#FF85B8">:</tspan> <tspan fill="#9E7BFF">string</tspan><tspan fill="#F4F4F6">;</tspan> <tspan fill="#F4F4F6">glow</tspan><tspan fill="#FF85B8">:</tspan> <tspan fill="#9E7BFF">boolean</tspan><tspan fill="#F4F4F6">; }</tspan></text>
+          <text x="0" y="60"><tspan fill="#FF85B8">const</tspan> <tspan fill="#F4F4F6">obsidian</tspan><tspan fill="#FF85B8">:</tspan> <tspan fill="#9E7BFF">AxolotlFlavor</tspan> <tspan fill="#FF85B8">=</tspan> <tspan fill="#F4F4F6">{ id:</tspan> <tspan fill="#6AE5B5">'obsidian'</tspan><tspan fill="#F4F4F6">, glow:</tspan> <tspan fill="#F3F99D">true</tspan> <tspan fill="#F4F4F6">};</tspan></text>
+          <text x="0" y="82" fill="#56B7EC">Terminal Output: [SYS] Kernel booted at 0x7FFF</text>
+        </g>
+      </g>
+
+      <!-- 4. VICTOR MONO NERD FONT -->
+      <g transform="translate(0, 562)">
+        <rect x="0" y="0" width="696" height="155" rx="10" fill="#09090B" stroke="#22222E" stroke-width="1.2"/>
+        <rect x="14" y="12" width="180" height="22" rx="4" fill="#2A1728" stroke="#FF85B8" stroke-width="1"/>
+        <text x="104" y="27" fill="#FF85B8" font-family="Departure Mono, monospace" font-size="11" text-anchor="middle">VICTOR MONO NERD FONT</text>
+        <text x="205" y="27" fill="#71717A" font-family="GeistMono Nerd Font, monospace" font-size="11">Slender &amp; Handschriftliche Kursivschrift</text>
+
+        <g transform="translate(18, 56)" font-size="13" font-family="VictorMono Nerd Font, monospace">
+          <text x="0" y="16" fill="#FF85B8" font-style="italic">// Echte Schreibschrift-Kursivierung (Natty Theme Liebling)</text>
+          <text x="0" y="38"><tspan fill="#FF85B8" font-style="italic">async function</tspan> <tspan fill="#56B7EC">hydrateUI</tspan><tspan fill="#F4F4F6">() {</tspan></text>
+          <text x="20" y="60"><tspan fill="#FF85B8" font-style="italic">const</tspan> <tspan fill="#F4F4F6">bezier = </tspan><tspan fill="#FF85B8" font-style="italic">await</tspan> <tspan fill="#56B7EC">calculateCurve</tspan><tspan fill="#F4F4F6">();</tspan></text>
+          <text x="20" y="82"><tspan fill="#FF85B8" font-style="italic">return</tspan> <tspan fill="#F4F4F6">bezier.</tspan><tspan fill="#56B7EC">render</tspan><tspan fill="#F4F4F6">(</tspan><tspan fill="#6AE5B5">'#canvas'</tspan><tspan fill="#F4F4F6">);</tspan></text>
+        </g>
+      </g>
+
+      <!-- 5. FIRA CODE NERD FONT -->
+      <g transform="translate(0, 732)">
+        <rect x="0" y="0" width="696" height="155" rx="10" fill="#09090B" stroke="#22222E" stroke-width="1.2"/>
+        <rect x="14" y="12" width="180" height="22" rx="4" fill="#202213" stroke="#F3F99D" stroke-width="1"/>
+        <text x="104" y="27" fill="#F3F99D" font-family="Departure Mono, monospace" font-size="11" text-anchor="middle">FIRA CODE NERD FONT</text>
+        <text x="205" y="27" fill="#71717A" font-family="GeistMono Nerd Font, monospace" font-size="11">Der Standard für Ligaturen</text>
+
+        <g transform="translate(18, 56)" font-size="13" font-family="FiraCode Nerd Font, monospace">
+          <text x="0" y="16" fill="#636A7E">// Bewährt, extrem lesbar, ikonische Ligaturen</text>
+          <text x="0" y="38"><tspan fill="#FF85B8">const</tspan> <tspan fill="#F4F4F6">fn</tspan> <tspan fill="#FF85B8">=</tspan> <tspan fill="#F4F4F6">(x: </tspan><tspan fill="#9E7BFF">number</tspan><tspan fill="#F4F4F6">) </tspan><tspan fill="#FF85B8">=&gt;</tspan> <tspan fill="#F4F4F6">x </tspan><tspan fill="#FF85B8">&gt;=</tspan> <tspan fill="#F3F99D">0</tspan> <tspan fill="#FF85B8">&amp;&amp;</tspan> <tspan fill="#F4F4F6">x </tspan><tspan fill="#FF85B8">!==</tspan> <tspan fill="#F3F99D">42</tspan><tspan fill="#F4F4F6">;</tspan></text>
+          <text x="0" y="60"><tspan fill="#56B7EC">console</tspan><tspan fill="#F4F4F6">.</tspan><tspan fill="#56B7EC">log</tspan><tspan fill="#F4F4F6">(</tspan><tspan fill="#6AE5B5">`Ligaturen: ==&gt; &gt;= != !== &lt;=&gt; &lt;- -&gt;`</tspan><tspan fill="#F4F4F6">);</tspan></text>
+          <text x="0" y="82" fill="#A1A1AA">Git:  main [↑1] ·  Lazygit synced</text>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

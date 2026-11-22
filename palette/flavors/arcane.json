@@ -1,0 +1,66 @@
+{
+  "id": "arcane",
+  "name": "Axolotl Arcane",
+  "slug": "axolotl-arcane",
+  "appearance": "dark",
+  "description": "Velvet indigo-black (#0D0B14) with violet undertones, glowing Mint, Sky Blue, and Natty Pink.",
+  "colors": {
+    "bg": "#0D0B14",
+    "bg_surface": "#161324",
+    "bg_elevated": "#1E1930",
+    "bg_selection": "#281E42",
+    "border": "#2A2440",
+    "border_active": "#7C4DFF",
+    "fg": "#F0EEFF",
+    "fg_secondary": "#CFCBE2",
+    "fg_muted": "#746E96",
+    "cursor": "#72F1B8",
+    "accents": {
+      "mint": "#72F1B8",
+      "cyan": "#68C3F8",
+      "blue": "#82AAFF",
+      "violet": "#7C4DFF",
+      "purple": "#9E7BFF",
+      "pink": "#FF85B8",
+      "yellow": "#FFE699",
+      "orange": "#FFAB70",
+      "red": "#FF6384"
+    },
+    "semantic": {
+      "primary": "#7C4DFF",
+      "secondary": "#72F1B8",
+      "keyword": "#FF85B8",
+      "function": "#68C3F8",
+      "string": "#72F1B8",
+      "constant": "#FFE699",
+      "type": "#9E7BFF",
+      "comment": "#746E96",
+      "success": "#72F1B8",
+      "info": "#68C3F8",
+      "warning": "#FFE699",
+      "danger": "#FF6384"
+    },
+    "ansi": {
+      "normal": {
+        "black": "#0D0B14",
+        "red": "#FF6384",
+        "green": "#72F1B8",
+        "yellow": "#FFE699",
+        "blue": "#68C3F8",
+        "magenta": "#FF85B8",
+        "cyan": "#7EE2ED",
+        "white": "#CFCBE2"
+      },
+      "bright": {
+        "black": "#524B70",
+        "red": "#FF829D",
+        "green": "#8FF7C8",
+        "yellow": "#FFEDB5",
+        "blue": "#8AD2FA",
+        "magenta": "#FFA3CA",
+        "cyan": "#9BEBF4",
+        "white": "#F0EEFF"
+      }
+    }
+  }
+}

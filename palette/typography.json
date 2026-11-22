@@ -1,0 +1,87 @@
+{
+  "suite": "Axolotl",
+  "fonts": {
+    "code_nerd_fonts": [
+      {
+        "id": "monaspace-neon",
+        "name": "Monaspace Neon NF",
+        "role": "Standard Code & Terminal Font (Clean Neo-Grotesque)",
+        "installed": true
+      },
+      {
+        "id": "monaspace-radon",
+        "name": "Monaspace Radon NF",
+        "role": "Texture Italic Partner for Comments & Keywords",
+        "installed": true
+      },
+      {
+        "id": "monaspace-krypton",
+        "name": "Monaspace Krypton NF",
+        "role": "Mechanical / Sci-Fi Blocky Code Font",
+        "installed": true
+      },
+      {
+        "id": "monaspace-argon",
+        "name": "Monaspace Argon NF",
+        "role": "Warm Humanist Code Font",
+        "installed": true
+      },
+      {
+        "id": "monaspace-xenon",
+        "name": "Monaspace Xenon NF",
+        "role": "Serif-inspired High Contrast Code Font",
+        "installed": true
+      },
+      {
+        "id": "geist-mono",
+        "name": "GeistMono Nerd Font",
+        "role": "Minimal Dark-UI Vercel Aesthetic",
+        "installed": true
+      },
+      {
+        "id": "fira-code",
+        "name": "FiraCode Nerd Font",
+        "role": "Classic Programming Ligatures",
+        "installed": true
+      },
+      {
+        "id": "victor-mono",
+        "name": "VictorMono Nerd Font",
+        "role": "Slender with Cursive Script Italics",
+        "installed": true
+      }
+    ],
+    "pixel_accent_fonts": [
+      {
+        "id": "departure-mono",
+        "name": "Departure Mono",
+        "role": "Retro-Futuristic Tech / HUD Bitmap Monospace",
+        "installed": true
+      },
+      {
+        "id": "geist-pixel-square",
+        "name": "Geist Pixel Square",
+        "role": "Vercel Clean Block Pixel UI Font",
+        "installed": true
+      },
+      {
+        "id": "geist-pixel-grid",
+        "name": "Geist Pixel Grid",
+        "role": "Dotted / LED Matrix Pixel Display Font",
+        "installed": true
+      },
+      {
+        "id": "silkscreen",
+        "name": "Silkscreen",
+        "role": "Clean Geometric Pixel Badges & Caps Headlines",
+        "installed": true
+      },
+      {
+        "id": "monocraft",
+        "name": "Monocraft",
+        "role": "Blocky Pixel Font with Full Nerd Icons & Ligatures",
+        "installed": true
+      }
+    ]
+  }
+}

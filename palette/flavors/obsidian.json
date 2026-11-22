@@ -1,0 +1,66 @@
+{
+  "id": "obsidian",
+  "name": "Axolotl Obsidian",
+  "slug": "axolotl-obsidian",
+  "appearance": "dark",
+  "description": "True pitch-black (#09090B) with glowing Wizard Mint, Sky Cyan, Electric Violet, and Natty Pink.",
+  "colors": {
+    "bg": "#09090B",
+    "bg_surface": "#121217",
+    "bg_elevated": "#191922",
+    "bg_selection": "#221D3A",
+    "border": "#23232E",
+    "border_active": "#6AE5B5",
+    "fg": "#F4F4F6",
+    "fg_secondary": "#A1A1AA",
+    "fg_muted": "#6E7185",
+    "cursor": "#6AE5B5",
+    "accents": {
+      "mint": "#6AE5B5",
+      "cyan": "#56B7EC",
+      "blue": "#68A5FF",
+      "violet": "#5E26F6",
+      "purple": "#9E7BFF",
+      "pink": "#FF85B8",
+      "yellow": "#F3F99D",
+      "orange": "#FFA666",
+      "red": "#FF5C77"
+    },
+    "semantic": {
+      "primary": "#6AE5B5",
+      "secondary": "#5E26F6",
+      "keyword": "#FF85B8",
+      "function": "#56B7EC",
+      "string": "#6AE5B5",
+      "constant": "#F3F99D",
+      "type": "#9E7BFF",
+      "comment": "#636A7E",
+      "success": "#6AE5B5",
+      "info": "#56B7EC",
+      "warning": "#F3F99D",
+      "danger": "#FF5C77"
+    },
+    "ansi": {
+      "normal": {
+        "black": "#09090B",
+        "red": "#FF5C77",
+        "green": "#6AE5B5",
+        "yellow": "#F3F99D",
+        "blue": "#56B7EC",
+        "magenta": "#FF85B8",
+        "cyan": "#5ECAD6",
+        "white": "#D4D4D8"
+      },
+      "bright": {
+        "black": "#484B5C",
+        "red": "#FF7A90",
+        "green": "#84F2C8",
+        "yellow": "#F8FCA8",
+        "blue": "#78C8F5",
+        "magenta": "#FFA3CA",
+        "cyan": "#7EE2ED",
+        "white": "#FFFFFF"
+      }
+    }
+  }
+}

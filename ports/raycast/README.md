@@ -1,60 +1,37 @@
-# Raycast Theme: mystyle
+# Raycast Themes — Axolotl Suite
 
-Raycast unterstützt Custom Themes für Raycast Pro Abonnenten oder Custom Icons/Styling in Extensions.
+Alle 3 Flavors der **Axolotl** Theme-Suite für Raycast:
 
-## 1. Raycast Pro Theme (Deeplink / Theme Creator)
+## Axolotl Obsidian (`axolotl-obsidian.json`)
+True pitch-black (#09090B) with glowing Wizard Mint, Sky Cyan, Electric Violet, and Natty Pink.
 
-Raycast Themes nutzen einen URL-Schema-Deeplink oder den Raycast Theme Explorer (`https://themes.ray.so`).
+- **Background**: `#09090B` / `#121217`
+- **Primary / Selection**: `#6AE5B5`
+- **Mint / Loader**: `#6AE5B5`
+- **Pink**: `#FF85B8`
+- **Cyan**: `#56B7EC`
+- **Violet**: `#5E26F6`
+- **Vorschau & 1-Klick Import (themes.ray.so)**: [In Raycast öffnen](https://themes.ray.so?version=1&name=Axolotl+Obsidian&author=Tobias+Sailer&appearance=dark&colors=%2309090B%2C%23121217%2C%23F4F4F6%2C%236AE5B5%2C%236AE5B5%2C%23FF5C77%2C%23FFA666%2C%23F3F99D%2C%236AE5B5%2C%2356B7EC%2C%235E26F6%2C%23FF85B8)
 
-### Farbzuordnung für Raycast:
+## Axolotl Natty (`axolotl-natty.json`)
+Deep abyssal carbon-navy (#0C0E16) led by punchy Natty Pink, Snazzy Mint, Ice Cyan, and Electric Violet.
 
-| Raycast Token | Mystyle Semantic Token | Hex Code |
-| :--- | :--- | :--- |
-| **Background** | `background.default` | `#1a1b26` |
-| **Background (Secondary)** | `background.surface` | `#24283b` |
-| **Text** | `foreground.default` | `#c0caf5` |
-| **Text (Secondary / Muted)** | `foreground.muted` | `#787c99` |
-| **Selection / Active Item** | `selection.bg` | `#33467c` |
-| **Accent / Highlight** | `roles.accent` | `#7aa2f7` |
-| **Red / Error** | `roles.danger` | `#f7768e` |
-| **Orange / Warning** | `roles.warning` | `#e0af68` |
-| **Yellow** | `accents.yellow` | `#e0af68` |
-| **Green / Success** | `roles.success` | `#9ece6a` |
-| **Blue / Info** | `roles.info` | `#7dcfff` |
-| **Purple** | `roles.accent_secondary`| `#bb9af7` |
+- **Background**: `#0C0E16` / `#141824`
+- **Primary / Selection**: `#FF75B5`
+- **Mint / Loader**: `#5AF78E`
+- **Pink**: `#FF75B5`
+- **Cyan**: `#89DDFF`
+- **Violet**: `#7C3AED`
+- **Vorschau & 1-Klick Import (themes.ray.so)**: [In Raycast öffnen](https://themes.ray.so?version=1&name=Axolotl+Natty&author=Tobias+Sailer&appearance=dark&colors=%230C0E16%2C%23141824%2C%23EEFFFF%2C%23FF75B5%2C%235AF78E%2C%23FF5C57%2C%23FFB86C%2C%23F3F99D%2C%235AF78E%2C%2389DDFF%2C%237C3AED%2C%23FF75B5)
 
----
+## Axolotl Arcane (`axolotl-arcane.json`)
+Velvet indigo-black (#0D0B14) with violet undertones, glowing Mint, Sky Blue, and Natty Pink.
 
-## 2. Raycast Theme JSON Export
+- **Background**: `#0D0B14` / `#161324`
+- **Primary / Selection**: `#7C4DFF`
+- **Mint / Loader**: `#72F1B8`
+- **Pink**: `#FF85B8`
+- **Cyan**: `#68C3F8`
+- **Violet**: `#7C4DFF`
+- **Vorschau & 1-Klick Import (themes.ray.so)**: [In Raycast öffnen](https://themes.ray.so?version=1&name=Axolotl+Arcane&author=Tobias+Sailer&appearance=dark&colors=%230D0B14%2C%23161324%2C%23F0EEFF%2C%237C4DFF%2C%2372F1B8%2C%23FF6384%2C%23FFAB70%2C%23FFE699%2C%2372F1B8%2C%2368C3F8%2C%237C4DFF%2C%23FF85B8)
 
-```json
-{
-  "name": "mystyle Dark",
-  "author": "Tobias Sailer",
-  "version": "1",
-  "appearance": "dark",
-  "colors": {
-    "background": "#1A1B26",
-    "backgroundSecondary": "#24283B",
-    "text": "#C0CAF5",
-    "selection": "#33467C",
-    "loader": "#7AA2F7",
-    "red": "#F7768E",
-    "orange": "#FF9E64",
-    "yellow": "#E0AF68",
-    "green": "#9ECE6A",
-    "magenta": "#F778BA",
-    "purple": "#BB9AF7",
-    "blue": "#7DCFFF",
-    "cyan": "#73DACA"
-  }
-}
-```
-
----
-
-## 3. Direkter Raycast Deeplink
-
-Ein Raycast Theme kann über eine `raycast://theme?...` URL direkt importiert werden.
-
-Sobald du deine genauen Wunschfarben festgelegt hast, können wir diesen Deeplink für einen 1-Klick-Import generieren.

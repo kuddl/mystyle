@@ -1,0 +1,479 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1080" viewBox="0 0 1600 1080">
+  <defs>
+    <!-- Gradients for Variant 1 -->
+    <linearGradient id="v1-grad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#5E26F6"/>
+      <stop offset="45%" stop-color="#56B7EC"/>
+      <stop offset="80%" stop-color="#6AE5B5"/>
+      <stop offset="100%" stop-color="#FF85B8"/>
+    </linearGradient>
+    <linearGradient id="v1-pill" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#5E26F6"/>
+      <stop offset="50%" stop-color="#56B7EC"/>
+      <stop offset="100%" stop-color="#6AE5B5"/>
+    </linearGradient>
+
+    <!-- Gradients for Variant 2 -->
+    <linearGradient id="v2-grad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FF75B5"/>
+      <stop offset="35%" stop-color="#8B5CF6"/>
+      <stop offset="70%" stop-color="#89DDFF"/>
+      <stop offset="100%" stop-color="#5AF78E"/>
+    </linearGradient>
+    <linearGradient id="v2-pill" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FF75B5"/>
+      <stop offset="50%" stop-color="#8B5CF6"/>
+      <stop offset="100%" stop-color="#89DDFF"/>
+    </linearGradient>
+
+    <!-- Gradients for Variant 3 -->
+    <linearGradient id="v3-grad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7C4DFF"/>
+      <stop offset="40%" stop-color="#68C3F8"/>
+      <stop offset="75%" stop-color="#72F1B8"/>
+      <stop offset="100%" stop-color="#FF85B8"/>
+    </linearGradient>
+    <linearGradient id="v3-pill" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#72F1B8"/>
+      <stop offset="50%" stop-color="#68C3F8"/>
+      <stop offset="100%" stop-color="#FF85B8"/>
+    </linearGradient>
+
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Canvas Background -->
+  <rect width="1600" height="1080" fill="#050507"/>
+
+  <!-- Top Header -->
+  <text x="60" y="54" fill="#F4F4F6" font-family="Monaspace Neon NF, FiraCode Nerd Font, monospace" font-size="26" font-weight="bold">mystyle — Theme Variants Preview (Easing Wizard × Natty Pink)</text>
+  <text x="60" y="84" fill="#71717A" font-family="Monaspace Neon NF, FiraCode Nerd Font, monospace" font-size="15">Core DNA: Mint (#6AE5B5) · Sky Cyan (#56B7EC) · Electric Violet (#5E26F6) + Natty Pink (#FF85B8)</text>
+
+  <!-- =====================================================================
+       VARIANT 1: OBSIDIAN WIZARD (True Pitch Black #09090B)
+       ===================================================================== -->
+  <g transform="translate(45, 115)">
+    <!-- Outer Card -->
+    <rect width="480" height="920" rx="18" fill="#09090B" stroke="#22222A" stroke-width="2"/>
+    <rect x="2" y="2" width="476" height="6" rx="3" fill="url(#v1-grad)"/>
+
+    <!-- Title & Badge -->
+    <text x="28" y="45" fill="#F4F4F6" font-family="Monaspace Neon NF, monospace" font-size="20" font-weight="bold">1. Obsidian Wizard</text>
+    <rect x="335" y="25" width="118" height="26" rx="13" fill="#121217" stroke="url(#v1-pill)" stroke-width="1.5"/>
+    <text x="394" y="42" fill="#6AE5B5" font-family="Monaspace Neon NF, monospace" font-size="11" font-weight="bold" text-anchor="middle">TRUE BLACK</text>
+    <text x="28" y="68" fill="#71717A" font-family="Monaspace Neon NF, monospace" font-size="12">Original #09090B · High-Contrast Glow + Natty Pink</text>
+
+    <!-- Color Swatches Row -->
+    <g transform="translate(28, 86)">
+      <!-- Swatch 1: BG -->
+      <rect x="0" y="0" width="54" height="36" rx="6" fill="#09090B" stroke="#272730" stroke-width="1.5"/>
+      <text x="27" y="50" fill="#71717A" font-family="Monaspace Neon NF, monospace" font-size="10" text-anchor="middle">#09090B</text>
+      <!-- Swatch 2: Surface -->
+      <rect x="62" y="0" width="54" height="36" rx="6" fill="#131318" stroke="#272730" stroke-width="1.5"/>
+      <text x="89" y="50" fill="#71717A" font-family="Monaspace Neon NF, monospace" font-size="10" text-anchor="middle">#131318</text>
+      <!-- Swatch 3: Mint -->
+      <rect x="124" y="0" width="54" height="36" rx="6" fill="#6AE5B5"/>
+      <text x="151" y="50" fill="#6AE5B5" font-family="Monaspace Neon NF, monospace" font-size="10" text-anchor="middle">#6AE5B5</text>
+      <!-- Swatch 4: Blue -->
+      <rect x="186" y="0" width="54" height="36" rx="6" fill="#56B7EC"/>
+      <text x="213" y="50" fill="#56B7EC" font-family="Monaspace Neon NF, monospace" font-size="10" text-anchor="middle">#56B7EC</text>
+      <!-- Swatch 5: Violet -->
+      <rect x="248" y="0" width="54" height="36" rx="6" fill="#5E26F6"/>
+      <text x="275" y="50" fill="#8B68F9" font-family="Monaspace Neon NF, monospace" font-size="10" text-anchor="middle">#5E26F6</text>
+      <!-- Swatch 6: Pink -->
+      <rect x="310" y="0" width="54" height="36" rx="6" fill="#FF85B8"/>
+      <text x="337" y="50" fill="#FF85B8" font-family="Monaspace Neon NF, monospace" font-size="10" text-anchor="middle">#FF85B8</text>
+      <!-- Swatch 7: Yellow -->
+      <rect x="372" y="0" width="52" height="36" rx="6" fill="#F3F99D"/>
+      <text x="398" y="50" fill="#F3F99D" font-family="Monaspace Neon NF, monospace" font-size="10" text-anchor="middle">#F3F99D</text>
+    </g>
+
+    <!-- Raycast Mockup -->
+    <g transform="translate(24, 155)">
+      <text x="4" y="14" fill="#71717A" font-family="Monaspace Neon NF, monospace" font-size="11" font-weight="bold">RAYCAST LAUNCHER</text>
+      <rect x="0" y="24" width="432" height="235" rx="12" fill="#0D0D11" stroke="#23232C" stroke-width="1.5"/>
+      <!-- Search Bar -->
+      <text x="18" y="53" fill="#6AE5B5" font-family="Monaspace Neon NF, monospace" font-size="14">&gt;</text>
+      <text x="36" y="53" fill="#F4F4F6" font-family="Monaspace Neon NF, monospace" font-size="14">Switch Mystyle Theme...</text>
+      <rect x="230" y="39" width="2" height="18" fill="#6AE5B5"/>
+      <rect x="352" y="36" width="64" height="22" rx="6" fill="#181820" stroke="#5E26F6" stroke-width="1"/>
+      <text x="384" y="51" fill="#FF85B8" font-family="Monaspace Neon NF, monospace" font-size="10" text-anchor="middle">Natty AI</text>
+      <line x1="0" y1="68" x2="432" y2="68" stroke="#1E1E26" stroke-width="1"/>
+
+      <!-- Selected Item -->
+      <rect x="10" y="78" width="412" height="40" rx="8" fill="#19162B" stroke="url(#v1-pill)" stroke-width="1.2"/>
+      <circle cx="30" cy="98" r="8" fill="#6AE5B5"/>
+      <text x="48" y="95" fill="#F4F4F6" font-family="Monaspace Neon NF, monospace" font-size="13" font-weight="bold">Apply Obsidian Wizard</text>
+      <text x="48" y="110" fill="#56B7EC" font-family="Monaspace Neon NF, monospace" font-size="10">Raycast · Ghostty · VS Code · Pi</text>
+      <text x="365" y="102" fill="#FF85B8" font-family="Monaspace Neon NF, monospace" font-size="11">⌘ ↵</text>
+
+      <!-- Item 2 -->
+      <circle cx="30" cy="142" r="8" fill="#5E26F6"/>
+      <text x="48" y="146" fill="#D4D4D8" font-family="Monaspace Neon NF, monospace" font-size="13">Open Ghostty Config</text>
+      <text x="345" y="146" fill="#71717A" font-family="Monaspace Neon NF, monospace" font-size="11">Terminal</text>
+
+      <!-- Item 3 -->
+      <circle cx="30" cy="180" r="8" fill="#FF85B8"/>
+      <text x="48" y="184" fill="#D4D4D8" font-family="Monaspace Neon NF, monospace" font-size="13">Lazygit Workspace</text>
+      <text x="345" y="184" fill="#71717A" font-family="Monaspace Neon NF, monospace" font-size="11">Git TUI</text>
+
+      <!-- Footer bar -->
+      <line x1="0" y1="228" x2="432" y2="228" stroke="#1E1E26" stroke-width="1"/>
+      <circle cx="18" cy="243" r="4" fill="#6AE5B5"/>
+      <text x="28" y="247" fill="#71717A" font-family="Monaspace Neon NF, monospace" font-size="10">mystyle v0.1</text>
+      <text x="340" y="247" fill="#56B7EC" font-family="Monaspace Neon NF, monospace" font-size="10">Actions ⌘K</text>
+    </g>
+
+    <!-- VS Code / Natty Syntax Mockup -->
+    <g transform="translate(24, 430)">
+      <text x="4" y="14" fill="#71717A" font-family="Monaspace Neon NF, monospace" font-size="11" font-weight="bold">VS CODE / NATTY SYNTAX (Monaspace Neon + Radon)</text>
+      <rect x="0" y="24" width="432" height="245" rx="12" fill="#09090B" stroke="#22222A" stroke-width="1.5"/>
+      <!-- Tab Bar -->
+      <rect x="0" y="24" width="432" height="30" rx="12" fill="#111116"/>
+      <rect x="12" y="28" width="135" height="26" rx="6" fill="#09090B"/>
+      <line x1="12" y1="28" x2="147" y2="28" stroke="#6AE5B5" stroke-width="2"/>
+      <text x="26" y="45" fill="#F4F4F6" font-family="Monaspace Neon NF, monospace" font-size="11">theme.ts</text>
+      <text x="165" y="45" fill="#71717A" font-family="Monaspace Neon NF, monospace" font-size="11">palette.json</text>
+
+      <!-- Code Lines -->
+      <g transform="translate(16, 74)" font-family="Monaspace Neon NF, FiraCode Nerd Font, monospace" font-size="12.5">
+        <text x="0" y="0" fill="#3F3F4E">1</text>
+        <text x="24" y="0" fill="#636A7E" font-family="Monaspace Radon NF, VictorMono Nerd Font, monospace" font-style="italic">// Easing Wizard × Natty Pink</text>
+
+        <text x="0" y="24" fill="#3F3F4E">2</text>
+        <text x="24" y="24"><tspan fill="#FF85B8">import</tspan> <tspan fill="#56B7EC">{</tspan> <tspan fill="#F4F4F6">createTheme</tspan> <tspan fill="#56B7EC">}</tspan> <tspan fill="#FF85B8">from</tspan> <tspan fill="#6AE5B5">'@mystyle/core'</tspan><tspan fill="#56B7EC">;</tspan></text>
+
+        <text x="0" y="48" fill="#3F3F4E">3</text>
+        <text x="24" y="48"><tspan fill="#FF85B8">export const</tspan> <tspan fill="#F4F4F6">wizard</tspan> <tspan fill="#FF85B8">=</tspan> <tspan fill="#56B7EC">createTheme(</tspan><tspan fill="#8B68F9">{</tspan></text>
+
+        <text x="0" y="72" fill="#3F3F4E">4</text>
+        <text x="44" y="72"><tspan fill="#F4F4F6">bg</tspan><tspan fill="#56B7EC">:</tspan> <tspan fill="#6AE5B5">'#09090B'</tspan><tspan fill="#56B7EC">,</tspan> <tspan fill="#F4F4F6">glow</tspan><tspan fill="#56B7EC">:</tspan> <tspan fill="#F3F99D">true</tspan><tspan fill="#56B7EC">,</tspan></text>
+
+        <text x="0" y="96" fill="#3F3F4E">5</text>
+        <text x="44" y="96"><tspan fill="#F4F4F6">curve</tspan><tspan fill="#56B7EC">:</tspan> <tspan fill="#56B7EC">[</tspan><tspan fill="#6AE5B5">'#5E26F6'</tspan><tspan fill="#56B7EC">,</tspan> <tspan fill="#6AE5B5">'#56B7EC'</tspan><tspan fill="#56B7EC">,</tspan> <tspan fill="#6AE5B5">'#6AE5B5'</tspan><tspan fill="#56B7EC">],</tspan></text>
+
+        <text x="0" y="120" fill="#3F3F4E">6</text>
+        <text x="44" y="120"><tspan fill="#F4F4F6">easing</tspan><tspan fill="#56B7EC">:</tspan> <tspan fill="#FF85B8">(</tspan><tspan fill="#F4F4F6">t</tspan><tspan fill="#FF85B8">:</tspan> <tspan fill="#56B7EC">number</tspan><tspan fill="#FF85B8">) =&gt;</tspan> <tspan fill="#F4F4F6">t</tspan> <tspan fill="#FF85B8">**</tspan> <tspan fill="#F3F99D">3</tspan></text>
+
+        <text x="0" y="144" fill="#3F3F4E">7</text>
+        <text x="24" y="144"><tspan fill="#8B68F9">}</tspan><tspan fill="#56B7EC">);</tspan></text>
+      </g>
+
+      <!-- Status Bar -->
+      <rect x="0" y="245" width="432" height="24" rx="6" fill="#121217"/>
+      <rect x="0" y="245" width="76" height="24" rx="6" fill="#5E26F6"/>
+      <text x="38" y="261" fill="#FFFFFF" font-family="Monaspace Neon NF, monospace" font-size="10" font-weight="bold" text-anchor="middle">NORMAL</text>
+      <text x="90" y="261" fill="#6AE5B5" font-family="Monaspace Neon NF, monospace" font-size="10"> main</text>
+      <text x="355" y="261" fill="#FF85B8" font-family="Monaspace Neon NF, monospace" font-size="10">TS 5.8</text>
+    </g>
+
+    <!-- Ghostty / Lazygit / Pi TUI Mockup -->
+    <g transform="translate(24, 700)">
+      <text x="4" y="14" fill="#71717A" font-family="Monaspace Neon NF, monospace" font-size="11" font-weight="bold">GHOSTTY / LAZYGIT / PI</text>
+      <rect x="0" y="24" width="432" height="170" rx="12" fill="#09090B" stroke="#22222A" stroke-width="1.5"/>
+      <!-- Active TUI Pane Border -->
+      <rect x="12" y="36" width="240" height="146" rx="6" fill="#0C0C10" stroke="#6AE5B5" stroke-width="1.2"/>
+      <text x="22" y="54" fill="#6AE5B5" font-family="Monaspace Neon NF, monospace" font-size="11" font-weight="bold">┌─ Staged Changes ─┐</text>
+      <text x="22" y="76" fill="#6AE5B5" font-family="Monaspace Neon NF, monospace" font-size="11">M  palette/palette.json</text>
+      <text x="22" y="96" fill="#56B7EC" font-family="Monaspace Neon NF, monospace" font-size="11">A  ports/raycast/theme.json</text>
+      <text x="22" y="116" fill="#FF85B8" font-family="Monaspace Neon NF, monospace" font-size="11">M  ports/ghostty/mystyle</text>
+      <text x="22" y="144" fill="#71717A" font-family="Monaspace Neon NF, monospace" font-size="10">❯</text>
+      <text x="36" y="144" fill="#F4F4F6" font-family="Monaspace Neon NF, monospace" font-size="11">git commit -m "feat"</text>
+
+      <!-- Right TUI Pane (Pi / Herdr) -->
+      <rect x="262" y="36" width="158" height="146" rx="6" fill="#0C0C10" stroke="#272732" stroke-width="1"/>
+      <text x="274" y="54" fill="#FF85B8" font-family="Monaspace Neon NF, monospace" font-size="11" font-weight="bold">◆ pi agent</text>
+      <text x="274" y="78" fill="#56B7EC" font-family="Monaspace Neon NF, monospace" font-size="10">✓ read palette</text>
+      <text x="274" y="96" fill="#6AE5B5" font-family="Monaspace Neon NF, monospace" font-size="10">✓ write ports</text>
+      <!-- Mini Bezier Curve inside preview -->
+      <path d="M 278 162 C 325 162, 335 112, 395 112" fill="none" stroke="url(#v1-pill)" stroke-width="3" stroke-linecap="round"/>
+      <circle cx="278" cy="162" r="4" fill="#5E26F6"/>
+      <circle cx="395" cy="112" r="4" fill="#6AE5B5"/>
+    </g>
+  </g>
+
+  <!-- =====================================================================
+       VARIANT 2: NATTY CYBER-MINT (Deep Carbon Navy #0C0E16 + Neon Pink Lead)
+       ===================================================================== -->
+  <g transform="translate(560, 115)">
+    <!-- Outer Card -->
+    <rect width="480" height="920" rx="18" fill="#0C0E16" stroke="#23293E" stroke-width="2"/>
+    <rect x="2" y="2" width="476" height="6" rx="3" fill="url(#v2-grad)"/>
+
+    <!-- Title & Badge -->
+    <text x="28" y="45" fill="#EEFFFF" font-family="Monaspace Neon NF, monospace" font-size="20" font-weight="bold">2. Natty Cyber-Mint</text>
+    <rect x="335" y="25" width="118" height="26" rx="13" fill="#151928" stroke="url(#v2-pill)" stroke-width="1.5"/>
+    <text x="394" y="42" fill="#FF75B5" font-family="Monaspace Neon NF, monospace" font-size="11" font-weight="bold" text-anchor="middle">NATTY FOCUS</text>
+    <text x="28" y="68" fill="#7E8C9A" font-family="Monaspace Neon NF, monospace" font-size="12">Deep Abyssal #0C0E16 · Punchy Pink + Snazzy Mint</text>
+
+    <!-- Color Swatches Row -->
+    <g transform="translate(28, 86)">
+      <rect x="0" y="0" width="54" height="36" rx="6" fill="#0C0E16" stroke="#283048" stroke-width="1.5"/>
+      <text x="27" y="50" fill="#7E8C9A" font-family="Monaspace Neon NF, monospace" font-size="10" text-anchor="middle">#0C0E16</text>
+
+      <rect x="62" y="0" width="54" height="36" rx="6" fill="#141824" stroke="#283048" stroke-width="1.5"/>
+      <text x="89" y="50" fill="#7E8C9A" font-family="Monaspace Neon NF, monospace" font-size="10" text-anchor="middle">#141824</text>
+
+      <rect x="124" y="0" width="54" height="36" rx="6" fill="#FF75B5"/>
+      <text x="151" y="50" fill="#FF75B5" font-family="Monaspace Neon NF, monospace" font-size="10" text-anchor="middle">#FF75B5</text>
+
+      <rect x="186" y="0" width="54" height="36" rx="6" fill="#5AF78E"/>
+      <text x="213" y="50" fill="#5AF78E" font-family="Monaspace Neon NF, monospace" font-size="10" text-anchor="middle">#5AF78E</text>
+
+      <rect x="248" y="0" width="54" height="36" rx="6" fill="#89DDFF"/>
+      <text x="275" y="50" fill="#89DDFF" font-family="Monaspace Neon NF, monospace" font-size="10" text-anchor="middle">#89DDFF</text>
+
+      <rect x="310" y="0" width="54" height="36" rx="6" fill="#7C3AED"/>
+      <text x="337" y="50" fill="#A78BFA" font-family="Monaspace Neon NF, monospace" font-size="10" text-anchor="middle">#7C3AED</text>
+
+      <rect x="372" y="0" width="52" height="36" rx="6" fill="#F3F99D"/>
+      <text x="398" y="50" fill="#F3F99D" font-family="Monaspace Neon NF, monospace" font-size="10" text-anchor="middle">#F3F99D</text>
+    </g>
+
+    <!-- Raycast Mockup -->
+    <g transform="translate(24, 155)">
+      <text x="4" y="14" fill="#7E8C9A" font-family="Monaspace Neon NF, monospace" font-size="11" font-weight="bold">RAYCAST LAUNCHER</text>
+      <rect x="0" y="24" width="432" height="235" rx="12" fill="#10131E" stroke="#232A40" stroke-width="1.5"/>
+      <!-- Search Bar -->
+      <text x="18" y="53" fill="#FF75B5" font-family="Monaspace Neon NF, monospace" font-size="14">&gt;</text>
+      <text x="36" y="53" fill="#EEFFFF" font-family="Monaspace Neon NF, monospace" font-size="14">Switch Mystyle Theme...</text>
+      <rect x="230" y="39" width="2" height="18" fill="#FF75B5"/>
+      <rect x="352" y="36" width="64" height="22" rx="6" fill="#1A1E30" stroke="#FF75B5" stroke-width="1"/>
+      <text x="384" y="51" fill="#5AF78E" font-family="Monaspace Neon NF, monospace" font-size="10" text-anchor="middle">Natty AI</text>
+      <line x1="0" y1="68" x2="432" y2="68" stroke="#1E2438" stroke-width="1"/>
+
+      <!-- Selected Item -->
+      <rect x="10" y="78" width="412" height="40" rx="8" fill="#1C1833" stroke="url(#v2-pill)" stroke-width="1.2"/>
+      <circle cx="30" cy="98" r="8" fill="#FF75B5"/>
+      <text x="48" y="95" fill="#EEFFFF" font-family="Monaspace Neon NF, monospace" font-size="13" font-weight="bold">Apply Natty Cyber-Mint</text>
+      <text x="48" y="110" fill="#89DDFF" font-family="Monaspace Neon NF, monospace" font-size="10">Raycast · Ghostty · VS Code · Pi</text>
+      <text x="365" y="102" fill="#5AF78E" font-family="Monaspace Neon NF, monospace" font-size="11">⌘ ↵</text>
+
+      <!-- Item 2 -->
+      <circle cx="30" cy="142" r="8" fill="#5AF78E"/>
+      <text x="48" y="146" fill="#B7C5D3" font-family="Monaspace Neon NF, monospace" font-size="13">Open Ghostty Config</text>
+      <text x="345" y="146" fill="#6E7C91" font-family="Monaspace Neon NF, monospace" font-size="11">Terminal</text>
+
+      <!-- Item 3 -->
+      <circle cx="30" cy="180" r="8" fill="#7C3AED"/>
+      <text x="48" y="184" fill="#B7C5D3" font-family="Monaspace Neon NF, monospace" font-size="13">Lazygit Workspace</text>
+      <text x="345" y="184" fill="#6E7C91" font-family="Monaspace Neon NF, monospace" font-size="11">Git TUI</text>
+
+      <!-- Footer bar -->
+      <line x1="0" y1="228" x2="432" y2="228" stroke="#1E2438" stroke-width="1"/>
+      <circle cx="18" cy="243" r="4" fill="#FF75B5"/>
+      <text x="28" y="247" fill="#6E7C91" font-family="Monaspace Neon NF, monospace" font-size="10">mystyle v0.1</text>
+      <text x="340" y="247" fill="#89DDFF" font-family="Monaspace Neon NF, monospace" font-size="10">Actions ⌘K</text>
+    </g>
+
+    <!-- VS Code / Natty Syntax Mockup -->
+    <g transform="translate(24, 430)">
+      <text x="4" y="14" fill="#7E8C9A" font-family="Monaspace Neon NF, monospace" font-size="11" font-weight="bold">VS CODE / NATTY SYNTAX (100% Natty Soul)</text>
+      <rect x="0" y="24" width="432" height="245" rx="12" fill="#0C0E16" stroke="#23293E" stroke-width="1.5"/>
+      <!-- Tab Bar -->
+      <rect x="0" y="24" width="432" height="30" rx="12" fill="#141824"/>
+      <rect x="12" y="28" width="135" height="26" rx="6" fill="#0C0E16"/>
+      <line x1="12" y1="28" x2="147" y2="28" stroke="#FF75B5" stroke-width="2"/>
+      <text x="26" y="45" fill="#EEFFFF" font-family="Monaspace Neon NF, monospace" font-size="11">theme.ts</text>
+      <text x="165" y="45" fill="#6E7C91" font-family="Monaspace Neon NF, monospace" font-size="11">palette.json</text>
+
+      <!-- Code Lines -->
+      <g transform="translate(16, 74)" font-family="Monaspace Neon NF, FiraCode Nerd Font, monospace" font-size="12.5">
+        <text x="0" y="0" fill="#3B445E">1</text>
+        <text x="24" y="0" fill="#6E7C91" font-family="Monaspace Radon NF, VictorMono Nerd Font, monospace" font-style="italic">// Easing Wizard × Natty Pink</text>
+
+        <text x="0" y="24" fill="#3B445E">2</text>
+        <text x="24" y="24"><tspan fill="#FF75B5">import</tspan> <tspan fill="#89DDFF">{</tspan> <tspan fill="#EEFFFF">createTheme</tspan> <tspan fill="#89DDFF">}</tspan> <tspan fill="#FF75B5">from</tspan> <tspan fill="#5AF78E">'@mystyle/core'</tspan><tspan fill="#89DDFF">;</tspan></text>
+
+        <text x="0" y="48" fill="#3B445E">3</text>
+        <text x="24" y="48"><tspan fill="#FF75B5">export const</tspan> <tspan fill="#EEFFFF">wizard</tspan> <tspan fill="#FF75B5">=</tspan> <tspan fill="#94D0FF">createTheme(</tspan><tspan fill="#A78BFA">{</tspan></text>
+
+        <text x="0" y="72" fill="#3B445E">4</text>
+        <text x="44" y="72"><tspan fill="#EEFFFF">bg</tspan><tspan fill="#89DDFF">:</tspan> <tspan fill="#5AF78E">'#0C0E16'</tspan><tspan fill="#89DDFF">,</tspan> <tspan fill="#EEFFFF">glow</tspan><tspan fill="#89DDFF">:</tspan> <tspan fill="#F3F99D">true</tspan><tspan fill="#89DDFF">,</tspan></text>
+
+        <text x="0" y="96" fill="#3B445E">5</text>
+        <text x="44" y="96"><tspan fill="#EEFFFF">curve</tspan><tspan fill="#89DDFF">:</tspan> <tspan fill="#89DDFF">[</tspan><tspan fill="#5AF78E">'#7C3AED'</tspan><tspan fill="#89DDFF">,</tspan> <tspan fill="#5AF78E">'#89DDFF'</tspan><tspan fill="#89DDFF">,</tspan> <tspan fill="#5AF78E">'#5AF78E'</tspan><tspan fill="#89DDFF">],</tspan></text>
+
+        <text x="0" y="120" fill="#3B445E">6</text>
+        <text x="44" y="120"><tspan fill="#EEFFFF">easing</tspan><tspan fill="#89DDFF">:</tspan> <tspan fill="#FF75B5">(</tspan><tspan fill="#EEFFFF">t</tspan><tspan fill="#FF75B5">:</tspan> <tspan fill="#94D0FF">number</tspan><tspan fill="#FF75B5">) =&gt;</tspan> <tspan fill="#EEFFFF">t</tspan> <tspan fill="#FF75B5">**</tspan> <tspan fill="#F3F99D">3</tspan></text>
+
+        <text x="0" y="144" fill="#3B445E">7</text>
+        <text x="24" y="144"><tspan fill="#A78BFA">}</tspan><tspan fill="#89DDFF">);</tspan></text>
+      </g>
+
+      <!-- Status Bar -->
+      <rect x="0" y="245" width="432" height="24" rx="6" fill="#141824"/>
+      <rect x="0" y="245" width="76" height="24" rx="6" fill="#FF75B5"/>
+      <text x="38" y="261" fill="#0C0E16" font-family="Monaspace Neon NF, monospace" font-size="10" font-weight="bold" text-anchor="middle">NORMAL</text>
+      <text x="90" y="261" fill="#5AF78E" font-family="Monaspace Neon NF, monospace" font-size="10"> main</text>
+      <text x="355" y="261" fill="#89DDFF" font-family="Monaspace Neon NF, monospace" font-size="10">TS 5.8</text>
+    </g>
+
+    <!-- Ghostty / Lazygit / Pi TUI Mockup -->
+    <g transform="translate(24, 700)">
+      <text x="4" y="14" fill="#7E8C9A" font-family="Monaspace Neon NF, monospace" font-size="11" font-weight="bold">GHOSTTY / LAZYGIT / PI</text>
+      <rect x="0" y="24" width="432" height="170" rx="12" fill="#0C0E16" stroke="#23293E" stroke-width="1.5"/>
+      <!-- Active TUI Pane Border -->
+      <rect x="12" y="36" width="240" height="146" rx="6" fill="#10131E" stroke="#FF75B5" stroke-width="1.2"/>
+      <text x="22" y="54" fill="#FF75B5" font-family="Monaspace Neon NF, monospace" font-size="11" font-weight="bold">┌─ Staged Changes ─┐</text>
+      <text x="22" y="76" fill="#5AF78E" font-family="Monaspace Neon NF, monospace" font-size="11">M  palette/palette.json</text>
+      <text x="22" y="96" fill="#89DDFF" font-family="Monaspace Neon NF, monospace" font-size="11">A  ports/raycast/theme.json</text>
+      <text x="22" y="116" fill="#FF75B5" font-family="Monaspace Neon NF, monospace" font-size="11">M  ports/ghostty/mystyle</text>
+      <text x="22" y="144" fill="#5AF78E" font-family="Monaspace Neon NF, monospace" font-size="10">❯</text>
+      <text x="36" y="144" fill="#EEFFFF" font-family="Monaspace Neon NF, monospace" font-size="11">git commit -m "feat"</text>
+
+      <!-- Right TUI Pane (Pi / Herdr) -->
+      <rect x="262" y="36" width="158" height="146" rx="6" fill="#10131E" stroke="#23293E" stroke-width="1"/>
+      <text x="274" y="54" fill="#89DDFF" font-family="Monaspace Neon NF, monospace" font-size="11" font-weight="bold">◆ pi agent</text>
+      <text x="274" y="78" fill="#5AF78E" font-family="Monaspace Neon NF, monospace" font-size="10">✓ read palette</text>
+      <text x="274" y="96" fill="#FF75B5" font-family="Monaspace Neon NF, monospace" font-size="10">✓ write ports</text>
+      <path d="M 278 162 C 325 162, 335 112, 395 112" fill="none" stroke="url(#v2-pill)" stroke-width="3" stroke-linecap="round"/>
+      <circle cx="278" cy="162" r="4" fill="#FF75B5"/>
+      <circle cx="395" cy="112" r="4" fill="#89DDFF"/>
+    </g>
+  </g>
+
+  <!-- =====================================================================
+       VARIANT 3: VELVET ARCANE (Rich Indigo-Black #0D0B14 + Balanced Blend)
+       ===================================================================== -->
+  <g transform="translate(1075, 115)">
+    <!-- Outer Card -->
+    <rect width="480" height="920" rx="18" fill="#0D0B14" stroke="#28233C" stroke-width="2"/>
+    <rect x="2" y="2" width="476" height="6" rx="3" fill="url(#v3-grad)"/>
+
+    <!-- Title & Badge -->
+    <text x="28" y="45" fill="#F0EEFF" font-family="Monaspace Neon NF, monospace" font-size="20" font-weight="bold">3. Velvet Arcane</text>
+    <rect x="335" y="25" width="118" height="26" rx="13" fill="#171426" stroke="url(#v3-pill)" stroke-width="1.5"/>
+    <text x="394" y="42" fill="#68C3F8" font-family="Monaspace Neon NF, monospace" font-size="11" font-weight="bold" text-anchor="middle">SOFT INDIGO</text>
+    <text x="28" y="68" fill="#857FA8" font-family="Monaspace Neon NF, monospace" font-size="12">Velvet #0D0B14 · Violet Undertone + Mint &amp; Pink</text>
+
+    <!-- Color Swatches Row -->
+    <g transform="translate(28, 86)">
+      <rect x="0" y="0" width="54" height="36" rx="6" fill="#0D0B14" stroke="#2D2744" stroke-width="1.5"/>
+      <text x="27" y="50" fill="#857FA8" font-family="Monaspace Neon NF, monospace" font-size="10" text-anchor="middle">#0D0B14</text>
+
+      <rect x="62" y="0" width="54" height="36" rx="6" fill="#161324" stroke="#2D2744" stroke-width="1.5"/>
+      <text x="89" y="50" fill="#857FA8" font-family="Monaspace Neon NF, monospace" font-size="10" text-anchor="middle">#161324</text>
+
+      <rect x="124" y="0" width="54" height="36" rx="6" fill="#72F1B8"/>
+      <text x="151" y="50" fill="#72F1B8" font-family="Monaspace Neon NF, monospace" font-size="10" text-anchor="middle">#72F1B8</text>
+
+      <rect x="186" y="0" width="54" height="36" rx="6" fill="#68C3F8"/>
+      <text x="213" y="50" fill="#68C3F8" font-family="Monaspace Neon NF, monospace" font-size="10" text-anchor="middle">#68C3F8</text>
+
+      <rect x="248" y="0" width="54" height="36" rx="6" fill="#7C4DFF"/>
+      <text x="275" y="50" fill="#9E7BFF" font-family="Monaspace Neon NF, monospace" font-size="10" text-anchor="middle">#7C4DFF</text>
+
+      <rect x="310" y="0" width="54" height="36" rx="6" fill="#FF85B8"/>
+      <text x="337" y="50" fill="#FF85B8" font-family="Monaspace Neon NF, monospace" font-size="10" text-anchor="middle">#FF85B8</text>
+
+      <rect x="372" y="0" width="52" height="36" rx="6" fill="#FFE699"/>
+      <text x="398" y="50" fill="#FFE699" font-family="Monaspace Neon NF, monospace" font-size="10" text-anchor="middle">#FFE699</text>
+    </g>
+
+    <!-- Raycast Mockup -->
+    <g transform="translate(24, 155)">
+      <text x="4" y="14" fill="#857FA8" font-family="Monaspace Neon NF, monospace" font-size="11" font-weight="bold">RAYCAST LAUNCHER</text>
+      <rect x="0" y="24" width="432" height="235" rx="12" fill="#120F1D" stroke="#2A2440" stroke-width="1.5"/>
+      <!-- Search Bar -->
+      <text x="18" y="53" fill="#72F1B8" font-family="Monaspace Neon NF, monospace" font-size="14">&gt;</text>
+      <text x="36" y="53" fill="#F0EEFF" font-family="Monaspace Neon NF, monospace" font-size="14">Switch Mystyle Theme...</text>
+      <rect x="230" y="39" width="2" height="18" fill="#68C3F8"/>
+      <rect x="352" y="36" width="64" height="22" rx="6" fill="#1E1930" stroke="#7C4DFF" stroke-width="1"/>
+      <text x="384" y="51" fill="#FF85B8" font-family="Monaspace Neon NF, monospace" font-size="10" text-anchor="middle">Natty AI</text>
+      <line x1="0" y1="68" x2="432" y2="68" stroke="#221D35" stroke-width="1"/>
+
+      <!-- Selected Item -->
+      <rect x="10" y="78" width="412" height="40" rx="8" fill="#211A3A" stroke="url(#v3-pill)" stroke-width="1.2"/>
+      <circle cx="30" cy="98" r="8" fill="#7C4DFF"/>
+      <text x="48" y="95" fill="#F0EEFF" font-family="Monaspace Neon NF, monospace" font-size="13" font-weight="bold">Apply Velvet Arcane</text>
+      <text x="48" y="110" fill="#72F1B8" font-family="Monaspace Neon NF, monospace" font-size="10">Raycast · Ghostty · VS Code · Pi</text>
+      <text x="365" y="102" fill="#FF85B8" font-family="Monaspace Neon NF, monospace" font-size="11">⌘ ↵</text>
+
+      <!-- Item 2 -->
+      <circle cx="30" cy="142" r="8" fill="#68C3F8"/>
+      <text x="48" y="146" fill="#CFCBE2" font-family="Monaspace Neon NF, monospace" font-size="13">Open Ghostty Config</text>
+      <text x="345" y="146" fill="#746E96" font-family="Monaspace Neon NF, monospace" font-size="11">Terminal</text>
+
+      <!-- Item 3 -->
+      <circle cx="30" cy="180" r="8" fill="#FF85B8"/>
+      <text x="48" y="184" fill="#CFCBE2" font-family="Monaspace Neon NF, monospace" font-size="13">Lazygit Workspace</text>
+      <text x="345" y="184" fill="#746E96" font-family="Monaspace Neon NF, monospace" font-size="11">Git TUI</text>
+
+      <!-- Footer bar -->
+      <line x1="0" y1="228" x2="432" y2="228" stroke="#221D35" stroke-width="1"/>
+      <circle cx="18" cy="243" r="4" fill="#7C4DFF"/>
+      <text x="28" y="247" fill="#746E96" font-family="Monaspace Neon NF, monospace" font-size="10">mystyle v0.1</text>
+      <text x="340" y="247" fill="#72F1B8" font-family="Monaspace Neon NF, monospace" font-size="10">Actions ⌘K</text>
+    </g>
+
+    <!-- VS Code / Natty Syntax Mockup -->
+    <g transform="translate(24, 430)">
+      <text x="4" y="14" fill="#857FA8" font-family="Monaspace Neon NF, monospace" font-size="11" font-weight="bold">VS CODE / NATTY SYNTAX (Velvet Contrast)</text>
+      <rect x="0" y="24" width="432" height="245" rx="12" fill="#0D0B14" stroke="#28233C" stroke-width="1.5"/>
+      <!-- Tab Bar -->
+      <rect x="0" y="24" width="432" height="30" rx="12" fill="#161324"/>
+      <rect x="12" y="28" width="135" height="26" rx="6" fill="#0D0B14"/>
+      <line x1="12" y1="28" x2="147" y2="28" stroke="#7C4DFF" stroke-width="2"/>
+      <text x="26" y="45" fill="#F0EEFF" font-family="Monaspace Neon NF, monospace" font-size="11">theme.ts</text>
+      <text x="165" y="45" fill="#746E96" font-family="Monaspace Neon NF, monospace" font-size="11">palette.json</text>
+
+      <!-- Code Lines -->
+      <g transform="translate(16, 74)" font-family="Monaspace Neon NF, FiraCode Nerd Font, monospace" font-size="12.5">
+        <text x="0" y="0" fill="#463F66">1</text>
+        <text x="24" y="0" fill="#746E96" font-family="Monaspace Radon NF, VictorMono Nerd Font, monospace" font-style="italic">// Easing Wizard × Natty Pink</text>
+
+        <text x="0" y="24" fill="#463F66">2</text>
+        <text x="24" y="24"><tspan fill="#FF85B8">import</tspan> <tspan fill="#68C3F8">{</tspan> <tspan fill="#F0EEFF">createTheme</tspan> <tspan fill="#68C3F8">}</tspan> <tspan fill="#FF85B8">from</tspan> <tspan fill="#72F1B8">'@mystyle/core'</tspan><tspan fill="#68C3F8">;</tspan></text>
+
+        <text x="0" y="48" fill="#463F66">3</text>
+        <text x="24" y="48"><tspan fill="#FF85B8">export const</tspan> <tspan fill="#F0EEFF">wizard</tspan> <tspan fill="#FF85B8">=</tspan> <tspan fill="#68C3F8">createTheme(</tspan><tspan fill="#9E7BFF">{</tspan></text>
+
+        <text x="0" y="72" fill="#463F66">4</text>
+        <text x="44" y="72"><tspan fill="#F0EEFF">bg</tspan><tspan fill="#68C3F8">:</tspan> <tspan fill="#72F1B8">'#0D0B14'</tspan><tspan fill="#68C3F8">,</tspan> <tspan fill="#F0EEFF">glow</tspan><tspan fill="#68C3F8">:</tspan> <tspan fill="#FFE699">true</tspan><tspan fill="#68C3F8">,</tspan></text>
+
+        <text x="0" y="96" fill="#463F66">5</text>
+        <text x="44" y="96"><tspan fill="#F0EEFF">curve</tspan><tspan fill="#68C3F8">:</tspan> <tspan fill="#68C3F8">[</tspan><tspan fill="#72F1B8">'#7C4DFF'</tspan><tspan fill="#68C3F8">,</tspan> <tspan fill="#72F1B8">'#68C3F8'</tspan><tspan fill="#68C3F8">,</tspan> <tspan fill="#72F1B8">'#72F1B8'</tspan><tspan fill="#68C3F8">],</tspan></text>
+
+        <text x="0" y="120" fill="#463F66">6</text>
+        <text x="44" y="120"><tspan fill="#F0EEFF">easing</tspan><tspan fill="#68C3F8">:</tspan> <tspan fill="#FF85B8">(</tspan><tspan fill="#F0EEFF">t</tspan><tspan fill="#FF85B8">:</tspan> <tspan fill="#9E7BFF">number</tspan><tspan fill="#FF85B8">) =&gt;</tspan> <tspan fill="#F0EEFF">t</tspan> <tspan fill="#FF85B8">**</tspan> <tspan fill="#FFE699">3</tspan></text>
+
+        <text x="0" y="144" fill="#463F66">7</text>
+        <text x="24" y="144"><tspan fill="#9E7BFF">}</tspan><tspan fill="#68C3F8">);</tspan></text>
+      </g>
+
+      <!-- Status Bar -->
+      <rect x="0" y="245" width="432" height="24" rx="6" fill="#161324"/>
+      <rect x="0" y="245" width="76" height="24" rx="6" fill="#72F1B8"/>
+      <text x="38" y="261" fill="#0D0B14" font-family="Monaspace Neon NF, monospace" font-size="10" font-weight="bold" text-anchor="middle">NORMAL</text>
+      <text x="90" y="261" fill="#68C3F8" font-family="Monaspace Neon NF, monospace" font-size="10"> main</text>
+      <text x="355" y="261" fill="#FF85B8" font-family="Monaspace Neon NF, monospace" font-size="10">TS 5.8</text>
+    </g>
+
+    <!-- Ghostty / Lazygit / Pi TUI Mockup -->
+    <g transform="translate(24, 700)">
+      <text x="4" y="14" fill="#857FA8" font-family="Monaspace Neon NF, monospace" font-size="11" font-weight="bold">GHOSTTY / LAZYGIT / PI</text>
+      <rect x="0" y="24" width="432" height="170" rx="12" fill="#0D0B14" stroke="#28233C" stroke-width="1.5"/>
+      <!-- Active TUI Pane Border -->
+      <rect x="12" y="36" width="240" height="146" rx="6" fill="#120F1D" stroke="#7C4DFF" stroke-width="1.2"/>
+      <text x="22" y="54" fill="#9E7BFF" font-family="Monaspace Neon NF, monospace" font-size="11" font-weight="bold">┌─ Staged Changes ─┐</text>
+      <text x="22" y="76" fill="#72F1B8" font-family="Monaspace Neon NF, monospace" font-size="11">M  palette/palette.json</text>
+      <text x="22" y="96" fill="#68C3F8" font-family="Monaspace Neon NF, monospace" font-size="11">A  ports/raycast/theme.json</text>
+      <text x="22" y="116" fill="#FF85B8" font-family="Monaspace Neon NF, monospace" font-size="11">M  ports/ghostty/mystyle</text>
+      <text x="22" y="144" fill="#FF85B8" font-family="Monaspace Neon NF, monospace" font-size="10">❯</text>
+      <text x="36" y="144" fill="#F0EEFF" font-family="Monaspace Neon NF, monospace" font-size="11">git commit -m "feat"</text>
+
+      <!-- Right TUI Pane (Pi / Herdr) -->
+      <rect x="262" y="36" width="158" height="146" rx="6" fill="#120F1D" stroke="#2A2440" stroke-width="1"/>
+      <text x="274" y="54" fill="#72F1B8" font-family="Monaspace Neon NF, monospace" font-size="11" font-weight="bold">◆ pi agent</text>
+      <text x="274" y="78" fill="#68C3F8" font-family="Monaspace Neon NF, monospace" font-size="10">✓ read palette</text>
+      <text x="274" y="96" fill="#FF85B8" font-family="Monaspace Neon NF, monospace" font-size="10">✓ write ports</text>
+      <path d="M 278 162 C 325 162, 335 112, 395 112" fill="none" stroke="url(#v3-pill)" stroke-width="3" stroke-linecap="round"/>
+      <circle cx="278" cy="162" r="4" fill="#72F1B8"/>
+      <circle cx="395" cy="112" r="4" fill="#FF85B8"/>
+    </g>
+  </g>
+</svg>

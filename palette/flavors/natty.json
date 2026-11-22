@@ -1,0 +1,66 @@
+{
+  "id": "natty",
+  "name": "Axolotl Natty",
+  "slug": "axolotl-natty",
+  "appearance": "dark",
+  "description": "Deep abyssal carbon-navy (#0C0E16) led by punchy Natty Pink, Snazzy Mint, Ice Cyan, and Electric Violet.",
+  "colors": {
+    "bg": "#0C0E16",
+    "bg_surface": "#141824",
+    "bg_elevated": "#1C2233",
+    "bg_selection": "#261E3F",
+    "border": "#232A40",
+    "border_active": "#FF75B5",
+    "fg": "#EEFFFF",
+    "fg_secondary": "#B7C5D3",
+    "fg_muted": "#6E7C91",
+    "cursor": "#FF75B5",
+    "accents": {
+      "mint": "#5AF78E",
+      "cyan": "#89DDFF",
+      "blue": "#94D0FF",
+      "violet": "#7C3AED",
+      "purple": "#A78BFA",
+      "pink": "#FF75B5",
+      "yellow": "#F3F99D",
+      "orange": "#FFB86C",
+      "red": "#FF5C57"
+    },
+    "semantic": {
+      "primary": "#FF75B5",
+      "secondary": "#7C3AED",
+      "keyword": "#FF75B5",
+      "function": "#94D0FF",
+      "string": "#5AF78E",
+      "constant": "#F3F99D",
+      "type": "#89DDFF",
+      "comment": "#6E7C91",
+      "success": "#5AF78E",
+      "info": "#89DDFF",
+      "warning": "#F3F99D",
+      "danger": "#FF5C57"
+    },
+    "ansi": {
+      "normal": {
+        "black": "#0C0E16",
+        "red": "#FF5C57",
+        "green": "#5AF78E",
+        "yellow": "#F3F99D",
+        "blue": "#94D0FF",
+        "magenta": "#FF75B5",
+        "cyan": "#89DDFF",
+        "white": "#B7C5D3"
+      },
+      "bright": {
+        "black": "#4B5672",
+        "red": "#FF7A76",
+        "green": "#7BFAA5",
+        "yellow": "#F7FCB5",
+        "blue": "#AEE0FF",
+        "magenta": "#FF94C6",
+        "cyan": "#A6E6FF",
+        "white": "#EEFFFF"
+      }
+    }
+  }
+}

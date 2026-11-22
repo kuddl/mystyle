@@ -1,0 +1,21 @@
+{
+  "$schema": "https://www.raycast.com/schemas/theme.json",
+  "author": "Tobias Sailer",
+  "name": "Axolotl Obsidian",
+  "version": "1",
+  "appearance": "dark",
+  "colors": {
+    "background": "#09090B",
+    "backgroundSecondary": "#121217",
+    "text": "#F4F4F6",
+    "selection": "#6AE5B5",
+    "loader": "#6AE5B5",
+    "red": "#FF5C77",
+    "orange": "#FFA666",
+    "yellow": "#F3F99D",
+    "green": "#6AE5B5",
+    "blue": "#56B7EC",
+    "purple": "#5E26F6",
+    "magenta": "#FF85B8"
+  }
+}

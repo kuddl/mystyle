@@ -1,37 +1,37 @@
-# mystyle
+# Axolotl Theme Suite 🦎
 
-Persönliches Design-System und Farbschema für Terminal-Apps, TUIs, Editoren und Tools.
+Persönliches Design-System und Farbschema (**Axolotl**) für Terminal-Apps, TUIs, Editoren und Tools.
+Kombiniert die leuchtenden Kurven-Farben von *Easing Wizard* (`Mint`, `Sky Cyan`, `Electric Violet`) mit dem *Natty Pink* (`#FF85B8`).
 
-## Philosophie
+## Die 3 Flavors
 
-- **Single Source of Truth**: Kernfarben und semantische Rollen werden zentral in `palette/` definiert.
-- **Ports & Formate**: Bereitstellung von Theme-Dateien für verschiedene Apps in `ports/`.
-- **Einfache Einbindung**: Konfigurationen können direkt in die jeweiligen App-Configs eingebunden oder verlinkt werden.
+| Flavor | Slug | Hintergrund | Charakter |
+| :--- | :--- | :--- | :--- |
+| **Axolotl Obsidian** | `axolotl-obsidian` | `#09090B` (True Black) | Maximaler Kontrast & Glow, Mint als Primär-Akzent |
+| **Axolotl Natty** | `axolotl-natty` | `#0C0E16` (Abyssal Navy) | 100 % Natty-Soul, Pink (`#FF75B5`) als Primär-Akzent |
+| **Axolotl Arcane** | `axolotl-arcane` | `#0D0B14` (Velvet Indigo) | Samtiger Violett-Unterton mit leuchtendem Mint & Pink |
 
-## Ziel-Apps
-
-- [x] **Raycast** (Theme / Extension Styling)
-- [ ] **Ghostty** (Terminal Emulator)
-- [ ] **Pi** (Coding Agent TUI / Themes)
-- [ ] **VS Code** (Editor Theme)
-- [ ] **Lazygit** (Git TUI)
-- [ ] **Lazydocker** (Docker TUI)
-- [ ] **Herdr** (Tooling / TUI)
+![Axolotl Variants Preview](assets/variants-preview.png)
 
 ## Struktur
 
 ```text
 mystyle/
-├── palette/          # Farbdefinitionen & semantische Rollen (JSON / YAML)
-│   ├── palette.json  # Rohe Farbwerte (Hex, RGB)
-│   └── semantic.json # Semantische Rollen (bg, fg, accent, etc.)
-├── ports/            # App-spezifische Themes
-│   ├── raycast/      # Raycast Theme Links & JSON Export
-│   ├── ghostty/      # Ghostty Config-Snippet
-│   ├── pi/           # Pi Custom Theme
-│   ├── vscode/       # VS Code Theme Extension / JSON
-│   ├── lazygit/      # Lazygit Theme Snippet
-│   ├── lazydocker/   # Lazydocker Theme Snippet
-│   └── herdr/        # Herdr Theme Config
-└── generator/        # (Optional) Skripte zum Erzeugen von Port-Configs
+├── palette/
+│   ├── flavors/
+│   │   ├── obsidian.json     # Axolotl Obsidian
+│   │   ├── natty.json        # Axolotl Natty
+│   │   └── arcane.json       # Axolotl Arcane
+│   └── typography.json       # Nerd-Fonts & Pixel-Accent-Fonts
+├── generator/
+│   └── build.mjs             # Generiert alle App-Ports aus palette/flavors/
+├── ports/
+│   ├── raycast/              # Raycast Themes (alle 3 Flavors)
+│   ├── ghostty/              # Ghostty Terminal Themes
+│   ├── pi/                   # Pi Coding Agent Themes
+│   ├── vscode/               # VS Code Theme Suite Extension
+│   ├── lazygit/              # Lazygit Configs
+│   ├── lazydocker/           # Lazydocker Configs
+│   └── herdr/                # Herdr Configs
+└── assets/                   # Previews & Mockups
 ```

@@ -1,0 +1,21 @@
+{
+  "$schema": "https://www.raycast.com/schemas/theme.json",
+  "author": "Tobias Sailer",
+  "name": "Axolotl Natty",
+  "version": "1",
+  "appearance": "dark",
+  "colors": {
+    "background": "#0C0E16",
+    "backgroundSecondary": "#141824",
+    "text": "#EEFFFF",
+    "selection": "#FF75B5",
+    "loader": "#5AF78E",
+    "red": "#FF5C57",
+    "orange": "#FFB86C",
+    "yellow": "#F3F99D",
+    "green": "#5AF78E",
+    "blue": "#89DDFF",
+    "purple": "#7C3AED",
+    "magenta": "#FF75B5"
+  }
+}
