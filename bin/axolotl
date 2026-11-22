@@ -206,27 +206,22 @@ function applyPi(flavor) {
 }
 
 function applyVSCode(flavor) {
-  const extDir = path.join(os.homedir(), '.vscode', 'extensions');
-  const targetExt = path.join(extDir, 'axolotl-theme');
   const srcExt = path.join(portsDir, 'vscode');
+  const vsixFile = path.join(srcExt, 'axolotl-theme-0.1.0.vsix');
 
-  fs.mkdirSync(extDir, { recursive: true });
-
-  // Create or update symlink
+  // Build package if vsix missing or rebuild on apply
   try {
-    if (fs.existsSync(targetExt)) {
-      const stat = fs.lstatSync(targetExt);
-      if (stat.isSymbolicLink()) {
-        fs.unlinkSync(targetExt);
-      } else {
-        fs.rmSync(targetExt, { recursive: true, force: true });
-      }
-    }
-    fs.symlinkSync(srcExt, targetExt);
-    console.log(`✅ Linked VS Code extension to ${targetExt}`);
+    execSync(`npx --yes @vscode/vsce package --no-git-tag-version --no-update-package-json`, {
+      cwd: srcExt,
+      stdio: 'pipe'
+    });
+    execSync(`code --install-extension "${vsixFile}" --force`, { stdio: 'pipe' });
+    console.log(`✅ Installed Axolotl Theme Extension directly into VS Code!`);
   } catch (err) {
-    console.error(`⚠️ Could not create symlink: ${err.message}. Copying files instead...`);
-    fs.cpSync(srcExt, targetExt, { recursive: true });
+    console.warn(`⚠️ VSIX packaging fallback to directory copy: ${err.message}`);
+    const extDir = path.join(os.homedir(), '.vscode', 'extensions', 'kuddl.axolotl-theme-0.1.0');
+    fs.mkdirSync(extDir, { recursive: true });
+    fs.cpSync(srcExt, extDir, { recursive: true });
   }
 
   // Update VS Code User settings.json
@@ -242,12 +237,10 @@ function applyVSCode(flavor) {
   if (fs.existsSync(settingsPath)) {
     try {
       const content = fs.readFileSync(settingsPath, 'utf8');
-      // Use regex to preserve comments in settings.json if possible, or fallback to JSON parse
       let updated;
       if (content.includes('"workbench.colorTheme"')) {
         updated = content.replace(/"workbench\.colorTheme"\s*:\s*"[^"]*"/, `"workbench.colorTheme": "${themeLabel}"`);
       } else {
-        // insert before closing brace
         const lastBrace = content.lastIndexOf('}');
         if (lastBrace !== -1) {
           updated = content.slice(0, lastBrace).trimEnd() + `,\n  "workbench.colorTheme": "${themeLabel}"\n}\n`;
