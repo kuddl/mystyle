@@ -17,10 +17,11 @@ function printHelp() {
 🦎 Axolotl CLI — Apply themes to your local tools
 
 Usage:
-  axolotl list                   List supported apps and flavors
-  axolotl build                  Run theme generator for all ports
-  axolotl apply herdr <flavor>   Apply theme to ~/.config/herdr/config.toml
-  axolotl open raycast <flavor>  Trigger 1-click import into Raycast
+  axolotl list                     List supported apps and flavors
+  axolotl build                    Run theme generator for all ports
+  axolotl apply herdr <flavor>     Apply theme to ~/.config/herdr/config.toml (CLI/TUI)
+  axolotl apply herdr-app <flavor> Apply theme to Herdr Desktop App
+  axolotl open raycast <flavor>    Trigger 1-click import into Raycast
 
 Available Flavors:
   - obsidian (default)
@@ -42,8 +43,9 @@ if (command === 'list') {
   • arcane    (Axolotl Arcane — Velvet Indigo & Electric Violet)
 
 📦 Supported Ports:
-  • raycast   (ports/raycast)
-  • herdr     (ports/herdr)
+  • raycast     (ports/raycast)
+  • herdr       (ports/herdr — CLI / TUI)
+  • herdr-app   (ports/herdr-app — Desktop App)
 `);
   process.exit(0);
 }
@@ -66,6 +68,8 @@ if (command === 'apply' || command === 'open') {
 
   if (targetApp === 'herdr') {
     applyHerdr(flavor);
+  } else if (targetApp === 'herdr-app') {
+    applyHerdrApp(flavor);
   } else if (targetApp === 'raycast') {
     openRaycast(flavor);
   } else {
@@ -117,6 +121,30 @@ function applyHerdr(flavor) {
     console.log('🔄 Herdr server reloaded config successfully!');
   } catch {
     console.log('ℹ️ Herdr server is not currently running. Changes will apply on next launch.');
+  }
+}
+
+function applyHerdrApp(flavor) {
+  const destDir = path.join(os.homedir(), '.config', 'herdr-app', 'themes');
+  fs.mkdirSync(destDir, { recursive: true });
+
+  const themeSlug = `axolotl-${flavor}`;
+  const srcFile = path.join(portsDir, 'herdr-app', `${themeSlug}.json`);
+  const destFile = path.join(destDir, `${themeSlug}.json`);
+
+  if (!fs.existsSync(srcFile)) {
+    console.error(`❌ Theme file not found at: ${srcFile}`);
+    process.exit(1);
+  }
+
+  fs.copyFileSync(srcFile, destFile);
+  console.log(`✅ Installed theme to ${destFile}`);
+
+  try {
+    execSync(`herdr-app do app.theme '{"name":"${themeSlug}"}'`, { stdio: 'pipe' });
+    console.log(`🔄 Herdr Desktop App switched to "${themeSlug}" successfully!`);
+  } catch {
+    console.log('ℹ️ Herdr Desktop App is not currently running. Theme is ready in Settings!');
   }
 }
 

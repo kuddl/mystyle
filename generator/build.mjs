@@ -204,5 +204,94 @@ ${tomlSnippet.trim()}
 `;
 
 fs.writeFileSync(path.join(herdrDir, 'README.md'), herdrReadme);
-console.log('Generated Herdr themes for:', flavors.map((f) => f.name).join(', '));
+console.log('Generated Herdr CLI/TUI themes for:', flavors.map((f) => f.name).join(', '));
+
+// Build Herdr Desktop App Ports (~/.config/herdr-app/themes/<flavor>.json)
+const herdrAppDir = path.join(portsDir, 'herdr-app');
+fs.mkdirSync(herdrAppDir, { recursive: true });
+
+for (const flavor of flavors) {
+  const c = flavor.colors;
+  const ansi = [
+    c.ansi.normal.black,
+    c.ansi.normal.red,
+    c.ansi.normal.green,
+    c.ansi.normal.yellow,
+    c.ansi.normal.blue,
+    c.ansi.normal.magenta,
+    c.ansi.normal.cyan,
+    c.ansi.normal.white,
+    c.ansi.bright.black,
+    c.ansi.bright.red,
+    c.ansi.bright.green,
+    c.ansi.bright.yellow,
+    c.ansi.bright.blue,
+    c.ansi.bright.magenta,
+    c.ansi.bright.cyan,
+    c.ansi.bright.white
+  ];
+
+  const appTheme = {
+    background: c.bg,
+    foreground: c.fg,
+    selection: c.bg_selection,
+    cursor: c.cursor,
+    ansi,
+    colors: {
+      background: c.bg,
+      foreground: c.fg,
+      canvas: c.bg === '#09090B' ? '#070708' : c.bg === '#0C0E16' ? '#090B12' : '#0A0810',
+      chrome: c.bg_surface,
+      surface: c.bg_surface,
+      popover: c.bg_elevated,
+      raised: c.bg_elevated,
+      hover: c.bg_selection,
+      selected: c.bg_selection,
+      border: c.border,
+      input: c.semantic.primary,
+      muted: c.fg_muted,
+      dim: c.ansi.bright.black,
+      accent: c.semantic.primary,
+      accent_foreground: '#FFFFFF',
+      solid: c.semantic.primary,
+      solid_foreground: '#FFFFFF',
+      ring: c.semantic.primary,
+      working: c.accents.yellow,
+      blocked: c.accents.red,
+      done: c.accents.mint,
+      idle: c.fg_muted,
+      unknown: c.ansi.bright.black
+    }
+  };
+
+  const appThemeFile = `${flavor.slug}.json`;
+  fs.writeFileSync(path.join(herdrAppDir, appThemeFile), JSON.stringify(appTheme, null, 2) + '\n');
+}
+
+const herdrAppReadme = `# Herdr Desktop App Themes — Axolotl Suite
+
+Custom Themes für die [Herdr Desktop App](https://herdr.dev).
+
+## Installation
+
+Kopiere die Theme-Dateien in den Theme-Ordner der Desktop-App:
+\`\`\`bash
+cp ports/herdr-app/*.json ~/.config/herdr-app/themes/
+\`\`\`
+
+Oder aktiviere ein Theme direkt per CLI:
+\`\`\`bash
+./bin/axolotl apply herdr-app arcane
+# oder
+./bin/axolotl apply herdr-app obsidian
+# oder
+./bin/axolotl apply herdr-app natty
+\`\`\`
+
+Alternativ kannst du das Theme in Herdr per Command Palette (\`Cmd+Shift+P\`) oder in den Einstellungen (**Settings → Theme**) auswählen.
+`;
+
+fs.writeFileSync(path.join(herdrAppDir, 'README.md'), herdrAppReadme);
+console.log('Generated Herdr Desktop App themes for:', flavors.map((f) => f.name).join(', '));
+
 
