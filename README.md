@@ -73,6 +73,14 @@ teal = "#5ECAD6"
 ./bin/axolotl apply herdr arcane
 \`\`\`
 
+### 3. Pi Coding Agent (TUI & Custom Mascot Header)
+Die Axolotl Suite integriert sich nahtlos in den [Pi Coding Agent](https://pi.dev) mit einem eigenen Custom Mascot Header und Farbanpassung für Syntax, Tools, Diffs und Thinking-Levels:
+
+\`\`\`bash
+./bin/axolotl apply pi arcane     # oder obsidian / natty
+\`\`\`
+*(Kopiert `axolotl-*.json` nach `~/.pi/agent/themes/`, aktiviert den Header in `~/.pi/agent/extensions/axolotl-header.ts` und setzt das Theme in `~/.pi/agent/settings.json`)*
+
 *Tipp fürs Terminal:*
 ```bash
 open "raycast://theme?version=1&name=Axolotl+Obsidian&author=Tobias+Sailer&appearance=dark&colors=%2309090B,%23121217,%23F4F4F6,%236AE5B5,%236AE5B5,%23FF5C77,%23FFA666,%23F3F99D,%236AE5B5,%2356B7EC,%235E26F6,%23FF85B8"

@@ -294,4 +294,135 @@ Alternativ kannst du das Theme in Herdr per Command Palette (\`Cmd+Shift+P\`) od
 fs.writeFileSync(path.join(herdrAppDir, 'README.md'), herdrAppReadme);
 console.log('Generated Herdr Desktop App themes for:', flavors.map((f) => f.name).join(', '));
 
+// Build Pi Coding Agent Themes (~/.pi/agent/themes/<flavor>.json)
+const piDir = path.join(portsDir, 'pi');
+fs.mkdirSync(piDir, { recursive: true });
+
+for (const flavor of flavors) {
+  const c = flavor.colors;
+  const piTheme = {
+    $schema: 'https://pi.dev/schemas/theme.schema.json',
+    name: flavor.slug,
+    appearance: 'dark',
+    vars: {
+      bg: c.bg,
+      bg_surface: c.bg_surface,
+      bg_elevated: c.bg_elevated,
+      selection: c.bg_selection,
+      text: c.fg,
+      secondary: c.fg_secondary,
+      muted: c.fg_muted,
+      primary: c.semantic.primary,
+      secondaryAccent: c.semantic.secondary,
+      mint: c.accents.mint,
+      pink: c.accents.pink,
+      cyan: c.accents.cyan,
+      violet: c.accents.violet,
+      yellow: c.accents.yellow,
+      red: c.accents.red,
+      orange: c.accents.orange,
+      purple: c.accents.purple,
+      border: c.border,
+      borderAccent: c.border_active
+    },
+    colors: {
+      accent: 'primary',
+      border: 'border',
+      borderAccent: 'borderAccent',
+      borderMuted: 'border',
+      success: 'mint',
+      error: 'red',
+      warning: 'yellow',
+      muted: 'muted',
+      dim: 'muted',
+      text: 'text',
+      thinkingText: 'secondary',
+      selectedBg: 'selection',
+      scrollbarTrack: 'bg_surface',
+      scrollbarThumb: 'muted',
+      searchMatchBg: 'selection',
+      searchMatchText: 'text',
+      userMessageBg: 'bg_surface',
+      userMessageText: 'text',
+      customMessageBg: 'bg_elevated',
+      customMessageText: 'text',
+      customMessageLabel: 'accent',
+      toolPendingBg: 'bg_surface',
+      toolSuccessBg: 'bg_surface',
+      toolErrorBg: 'bg_surface',
+      toolTitle: 'text',
+      toolOutput: 'secondary',
+      mdHeading: 'primary',
+      mdLink: 'cyan',
+      mdLinkUrl: 'muted',
+      mdCode: 'pink',
+      mdCodeBlock: 'mint',
+      mdCodeBlockBorder: 'border',
+      mdQuote: 'secondary',
+      mdQuoteBorder: 'primary',
+      mdHr: 'border',
+      mdListBullet: 'violet',
+      toolDiffAdded: 'mint',
+      toolDiffRemoved: 'red',
+      toolDiffContext: 'muted',
+      syntaxComment: 'muted',
+      syntaxKeyword: 'pink',
+      syntaxFunction: 'cyan',
+      syntaxVariable: 'primary',
+      syntaxString: 'mint',
+      syntaxNumber: 'yellow',
+      syntaxType: 'purple',
+      syntaxOperator: 'violet',
+      syntaxPunctuation: 'secondary',
+      thinkingOff: 'muted',
+      thinkingMinimal: 'secondary',
+      thinkingLow: 'cyan',
+      thinkingMedium: 'violet',
+      thinkingHigh: 'pink',
+      thinkingXhigh: 'red',
+      thinkingMax: 'orange',
+      bashMode: 'mint'
+    },
+    export: {
+      pageBg: c.bg,
+      cardBg: c.bg_surface,
+      infoBg: c.bg_elevated
+    }
+  };
+
+  const piThemeFile = `${flavor.slug}.json`;
+  fs.writeFileSync(path.join(piDir, piThemeFile), JSON.stringify(piTheme, null, 2) + '\n');
+}
+
+const piReadme = `# Pi Coding Agent Themes — Axolotl Suite
+
+Themes für den [Pi Coding Agent](https://pi.dev).
+
+## Installation
+
+Kopiere die Theme-Dateien in deinen globalen Pi Theme-Ordner:
+\`\`\`bash
+mkdir -p ~/.pi/agent/themes
+cp ports/pi/*.json ~/.pi/agent/themes/
+\`\`\`
+
+Oder verwende das Axolotl CLI:
+\`\`\`bash
+./bin/axolotl apply pi arcane
+# oder
+./bin/axolotl apply pi obsidian
+# oder
+./bin/axolotl apply pi natty
+\`\`\`
+
+In Pi kannst du das Theme jederzeit über \`/settings\` → **Theme** auswählen oder per CLI starten mit:
+\`\`\`bash
+pi --use-theme axolotl-arcane
+\`\`\`
+`;
+
+fs.writeFileSync(path.join(piDir, 'README.md'), piReadme);
+console.log('Generated Pi Coding Agent themes for:', flavors.map((f) => f.name).join(', '));
+
+
 

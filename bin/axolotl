@@ -21,6 +21,7 @@ Usage:
   axolotl build                    Run theme generator for all ports
   axolotl apply herdr <flavor>     Apply theme to ~/.config/herdr/config.toml (CLI/TUI)
   axolotl apply herdr-app <flavor> Apply theme to Herdr Desktop App
+  axolotl apply pi <flavor>        Apply theme to ~/.pi/agent/settings.json
   axolotl open raycast <flavor>    Trigger 1-click import into Raycast
 
 Available Flavors:
@@ -46,6 +47,7 @@ if (command === 'list') {
   • raycast     (ports/raycast)
   • herdr       (ports/herdr — CLI / TUI)
   • herdr-app   (ports/herdr-app — Desktop App)
+  • pi          (ports/pi — Pi Coding Agent TUI & Header)
 `);
   process.exit(0);
 }
@@ -70,6 +72,8 @@ if (command === 'apply' || command === 'open') {
     applyHerdr(flavor);
   } else if (targetApp === 'herdr-app') {
     applyHerdrApp(flavor);
+  } else if (targetApp === 'pi') {
+    applyPi(flavor);
   } else if (targetApp === 'raycast') {
     openRaycast(flavor);
   } else {
@@ -146,6 +150,55 @@ function applyHerdrApp(flavor) {
   } catch {
     console.log('ℹ️ Herdr Desktop App is not currently running. Theme is ready in Settings!');
   }
+}
+
+function applyPi(flavor) {
+  const agentDir = path.join(os.homedir(), '.pi', 'agent');
+  const themesDir = path.join(agentDir, 'themes');
+  const extensionsDir = path.join(agentDir, 'extensions');
+  const settingsPath = path.join(agentDir, 'settings.json');
+
+  fs.mkdirSync(themesDir, { recursive: true });
+  fs.mkdirSync(extensionsDir, { recursive: true });
+
+  const themeSlug = `axolotl-${flavor}`;
+  const srcThemeFile = path.join(portsDir, 'pi', `${themeSlug}.json`);
+  const destThemeFile = path.join(themesDir, `${themeSlug}.json`);
+
+  if (!fs.existsSync(srcThemeFile)) {
+    console.error(`❌ Theme file not found at: ${srcThemeFile}`);
+    process.exit(1);
+  }
+
+  // Copy all Axolotl themes to ~/.pi/agent/themes
+  const piThemes = fs.readdirSync(path.join(portsDir, 'pi')).filter((f) => f.endsWith('.json'));
+  for (const f of piThemes) {
+    fs.copyFileSync(path.join(portsDir, 'pi', f), path.join(themesDir, f));
+  }
+  console.log(`✅ Copied Axolotl themes to ${themesDir}`);
+
+  // Copy header extension
+  const srcHeader = path.join(portsDir, 'pi', 'axolotl-header.ts');
+  const destHeader = path.join(extensionsDir, 'axolotl-header.ts');
+  if (fs.existsSync(srcHeader)) {
+    fs.copyFileSync(srcHeader, destHeader);
+    console.log(`✅ Installed Axolotl custom mascot header to ${destHeader}`);
+  }
+
+  // Update ~/.pi/agent/settings.json
+  let settings = {};
+  if (fs.existsSync(settingsPath)) {
+    try {
+      settings = JSON.parse(fs.readFileSync(settingsPath, 'utf8'));
+    } catch {
+      settings = {};
+    }
+  }
+
+  settings.theme = themeSlug;
+  fs.writeFileSync(settingsPath, JSON.stringify(settings, null, 2) + '\n');
+  console.log(`✅ Set Pi theme to "${themeSlug}" in ${settingsPath}`);
+  console.log(`🦎 Pi is now themed with ${themeSlug}! Start or reload Pi to see your Axolotl header & colors.`);
 }
 
 function openRaycast(flavor) {

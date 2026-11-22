@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 32" width="160" height="32">
+  <defs>
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FF85B8"/>
+      <stop offset="50%" stop-color="#6AE5B5"/>
+      <stop offset="100%" stop-color="#56B7EC"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Axolotl Mini Face Icon -->
+  <g transform="translate(2, 4) scale(0.047)">
+    <!-- Gills -->
+    <path d="M 60 160 C 20 120, 10 180, 50 190 C 15 200, 10 240, 60 225" fill="none" stroke="#5E26F6" stroke-width="24" stroke-linecap="round"/>
+    <path d="M 452 160 C 492 120, 502 180, 462 190 C 497 200, 502 240, 452 225" fill="none" stroke="#5E26F6" stroke-width="24" stroke-linecap="round"/>
+    <circle cx="15" cy="130" r="14" fill="#56B7EC"/>
+    <circle cx="497" cy="130" r="14" fill="#56B7EC"/>
+
+    <!-- Head -->
+    <ellipse cx="256" cy="256" rx="170" ry="125" fill="#FF85B8"/>
+
+    <!-- Eyes -->
+    <circle cx="185" cy="240" r="28" fill="#09090B"/>
+    <circle cx="178" cy="232" r="11" fill="#6AE5B5"/>
+    <circle cx="327" cy="240" r="28" fill="#09090B"/>
+    <circle cx="320" cy="232" r="11" fill="#6AE5B5"/>
+
+    <!-- Cheeks -->
+    <circle cx="150" cy="285" r="14" fill="#6AE5B5" opacity="0.85"/>
+    <circle cx="362" cy="285" r="14" fill="#6AE5B5" opacity="0.85"/>
+
+    <!-- Smile -->
+    <path d="M 226 280 Q 256 304 286 280" fill="none" stroke="#09090B" stroke-width="10" stroke-linecap="round"/>
+  </g>
+
+  <!-- Text: Axolotl -->
+  <text x="34" y="21" font-family="'Geist Mono', 'Monaspace Neon', monospace" font-size="14" font-weight="700" fill="url(#textGrad)" letter-spacing="0.5">Axolotl</text>
+  <rect x="100" y="8" width="48" height="15" rx="4" fill="#5E26F6" fill-opacity="0.3" stroke="#5E26F6" stroke-width="1"/>
+  <text x="124" y="19" font-family="monospace" font-size="8.5" font-weight="bold" fill="#6AE5B5" text-anchor="middle">ARCANE</text>
+</svg>

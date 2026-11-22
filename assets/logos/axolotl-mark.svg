@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0E0C18"/>
+      <stop offset="100%" stop-color="#07060A"/>
+    </linearGradient>
+    <linearGradient id="bodyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF85B8"/>
+      <stop offset="100%" stop-color="#E05297"/>
+    </linearGradient>
+    <linearGradient id="frillGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#5E26F6"/>
+      <stop offset="50%" stop-color="#9146FF"/>
+      <stop offset="100%" stop-color="#FF85B8"/>
+    </linearGradient>
+    <linearGradient id="mintGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6AE5B5"/>
+      <stop offset="100%" stop-color="#56B7EC"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+  
+
+  <!-- Glow effect -->
+  <g filter="url(#glow)" opacity="0.6">
+    <ellipse cx="256" cy="270" rx="140" ry="115" fill="none" stroke="#FF85B8" stroke-width="12"/>
+  </g>
+
+  <!-- Axolotl Feathery Gills (Left) -->
+  <g id="gills-left">
+    <!-- Top Gill -->
+    <path d="M 140 220 C 70 180, 55 240, 110 250 C 70 255, 60 300, 125 285 C 80 310, 95 345, 145 315"
+          fill="none" stroke="url(#frillGrad)" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- Gill accents -->
+    <circle cx="80" cy="205" r="10" fill="#56B7EC"/>
+    <circle cx="65" cy="275" r="12" fill="#6AE5B5"/>
+    <circle cx="85" cy="335" r="10" fill="#5E26F6"/>
+  </g>
+
+  <!-- Axolotl Feathery Gills (Right) -->
+  <g id="gills-right" transform="translate(512, 0) scale(-1, 1)">
+    <!-- Top Gill -->
+    <path d="M 140 220 C 70 180, 55 240, 110 250 C 70 255, 60 300, 125 285 C 80 310, 95 345, 145 315"
+          fill="none" stroke="url(#frillGrad)" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- Gill accents -->
+    <circle cx="80" cy="205" r="10" fill="#56B7EC"/>
+    <circle cx="65" cy="275" r="12" fill="#6AE5B5"/>
+    <circle cx="85" cy="335" r="10" fill="#5E26F6"/>
+  </g>
+
+  <!-- Head / Body Base -->
+  <path d="M 130 265 C 130 170, 382 170, 382 265 C 382 365, 130 365, 130 265 Z"
+        fill="url(#bodyGrad)"/>
+
+  <!-- Cheeks / Blushing Spots -->
+  <circle cx="175" cy="295" r="18" fill="#5E26F6" opacity="0.4"/>
+  <circle cx="337" cy="295" r="18" fill="#5E26F6" opacity="0.4"/>
+  <circle cx="175" cy="295" r="10" fill="#6AE5B5" opacity="0.8"/>
+  <circle cx="337" cy="295" r="10" fill="#6AE5B5" opacity="0.8"/>
+
+  <!-- Big Sparkly Eyes -->
+  <g id="eyes">
+    <!-- Left Eye -->
+    <circle cx="195" cy="245" r="26" fill="#0C0E16"/>
+    <circle cx="195" cy="245" r="23" fill="#181528"/>
+    <circle cx="187" cy="237" r="10" fill="#6AE5B5"/>
+    <circle cx="205" cy="255" r="5" fill="#FFFFFF"/>
+
+    <!-- Right Eye -->
+    <circle cx="317" cy="245" r="26" fill="#0C0E16"/>
+    <circle cx="317" cy="245" r="23" fill="#181528"/>
+    <circle cx="309" cy="237" r="10" fill="#6AE5B5"/>
+    <circle cx="327" cy="255" r="5" fill="#FFFFFF"/>
+  </g>
+
+  <!-- Happy Axolotl Curved Smile -->
+  <path d="M 234 290 Q 256 312 278 290"
+        fill="none" stroke="#0C0E16" stroke-width="8" stroke-linecap="round"/>
+
+  <!-- Magic Sparkle Forehead Crown -->
+  <path d="M 256 160 L 261 178 L 279 183 L 261 188 L 256 206 L 251 188 L 233 183 L 251 178 Z"
+        fill="#6AE5B5"/>
+</svg>
