@@ -1,0 +1,22 @@
+{
+  "$schema": "https://www.raycast.com/schemas/theme.json",
+  "name": "mystyle Dark",
+  "author": "Tobias Sailer",
+  "version": "1",
+  "appearance": "dark",
+  "colors": {
+    "background": "#1A1B26",
+    "backgroundSecondary": "#24283B",
+    "text": "#C0CAF5",
+    "selection": "#33467C",
+    "loader": "#7AA2F7",
+    "red": "#F7768E",
+    "orange": "#FF9E64",
+    "yellow": "#E0AF68",
+    "green": "#9ECE6A",
+    "magenta": "#F778BA",
+    "purple": "#BB9AF7",
+    "blue": "#7DCFFF",
+    "cyan": "#73DACA"
+  }
+}
