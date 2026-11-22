@@ -81,6 +81,14 @@ Die Axolotl Suite integriert sich nahtlos in den [Pi Coding Agent](https://pi.de
 \`\`\`
 *(Kopiert `axolotl-*.json` nach `~/.pi/agent/themes/`, aktiviert den Header in `~/.pi/agent/extensions/axolotl-header.ts` und setzt das Theme in `~/.pi/agent/settings.json`)*
 
+### 4. Visual Studio Code
+Die offizielle VS Code Theme Extension mit allen 3 Flavors (`ports/vscode/`):
+
+\`\`\`bash
+./bin/axolotl apply vscode natty  # oder obsidian / arcane
+\`\`\`
+*(Verlinkt die Extension automatisch nach `~/.vscode/extensions/axolotl-theme` und aktiviert das Theme in VS Code)*
+
 *Tipp fürs Terminal:*
 ```bash
 open "raycast://theme?version=1&name=Axolotl+Obsidian&author=Tobias+Sailer&appearance=dark&colors=%2309090B,%23121217,%23F4F4F6,%236AE5B5,%236AE5B5,%23FF5C77,%23FFA666,%23F3F99D,%236AE5B5,%2356B7EC,%235E26F6,%23FF85B8"
@@ -116,6 +124,8 @@ Angelehnt an die modulare Struktur bekannter Theme-Ökosysteme (wie Dracula / Ca
 - [x] **Raycast** (`ports/raycast/`) – Alle 3 Flavors mit 1-Klick-Import
 - [x] **Herdr** (`ports/herdr/`) – CLI / TUI Custom Theme Configs (Obsidian, Natty, Arcane)
 - [x] **Herdr Desktop App** (`ports/herdr-app/`) – GPUI Desktop Theme JSONs für `~/.config/herdr-app/themes/`
+- [x] **Pi Coding Agent** (`ports/pi/`) – TUI Theme & Custom Pixel Mascot Header Extension
+- [x] **VS Code** (`ports/vscode/`) – Vollständige Theme-Extension mit allen 3 Flavors
 - [ ] **Ghostty** (`ports/ghostty/`) – Terminal-Themes + Font-Profile
 - [ ] **Webseite / Showcase** (`docs/` oder `web/`) – Statische Landing-Page im Dracula/Linear-Style mit Copy-Paste & Installationsanleitungen
 

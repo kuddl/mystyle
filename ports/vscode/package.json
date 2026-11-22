@@ -1,0 +1,49 @@
+{
+  "name": "axolotl-theme",
+  "displayName": "Axolotl Theme Suite",
+  "description": "True pitch black, abyssal navy, and velvet indigo themes featuring Wizard Mint, Sky Cyan, Electric Violet, and Natty Pink.",
+  "version": "0.1.0",
+  "publisher": "kuddl",
+  "author": "Tobias Sailer",
+  "icon": "icon.png",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kuddl/mystyle"
+  },
+  "engines": {
+    "vscode": "^1.70.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "keywords": [
+    "theme",
+    "dark",
+    "axolotl",
+    "natty",
+    "snazzy",
+    "obsidian",
+    "arcane",
+    "mint"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "Axolotl Obsidian",
+        "uiTheme": "vs-dark",
+        "path": "./themes/axolotl-obsidian-color-theme.json"
+      },
+      {
+        "label": "Axolotl Natty",
+        "uiTheme": "vs-dark",
+        "path": "./themes/axolotl-natty-color-theme.json"
+      },
+      {
+        "label": "Axolotl Arcane",
+        "uiTheme": "vs-dark",
+        "path": "./themes/axolotl-arcane-color-theme.json"
+      }
+    ]
+  }
+}

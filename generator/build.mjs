@@ -424,5 +424,296 @@ pi --use-theme axolotl-arcane
 fs.writeFileSync(path.join(piDir, 'README.md'), piReadme);
 console.log('Generated Pi Coding Agent themes for:', flavors.map((f) => f.name).join(', '));
 
+// Build VS Code Extension Ports (ports/vscode/)
+const vscodeDir = path.join(portsDir, 'vscode');
+const vscodeThemesDir = path.join(vscodeDir, 'themes');
+fs.mkdirSync(vscodeThemesDir, { recursive: true });
+
+// Copy icon from assets
+const iconSrc = path.join(rootDir, 'assets', 'icons', 'icon-64.png');
+if (fs.existsSync(iconSrc)) {
+  fs.copyFileSync(iconSrc, path.join(vscodeDir, 'icon.png'));
+}
+
+const vscodeThemesMeta = [];
+
+for (const flavor of flavors) {
+  const c = flavor.colors;
+  const themeFileName = `${flavor.slug}-color-theme.json`;
+  const themePath = path.join(vscodeThemesDir, themeFileName);
+
+  const vsTheme = {
+    name: flavor.name,
+    type: 'dark',
+    colors: {
+      // Activity Bar
+      'activityBar.background': c.bg_surface,
+      'activityBar.foreground': c.fg,
+      'activityBar.inactiveForeground': c.fg_muted,
+      'activityBar.border': c.border,
+      'activityBarBadge.background': c.semantic.primary,
+      'activityBarBadge.foreground': '#FFFFFF',
+
+      // Side Bar
+      'sideBar.background': c.bg_surface,
+      'sideBar.foreground': c.fg_secondary,
+      'sideBar.border': c.border,
+      'sideBarTitle.foreground': c.fg,
+      'sideBarSectionHeader.background': c.bg_surface,
+      'sideBarSectionHeader.foreground': c.fg,
+      'sideBarSectionHeader.border': c.border,
+
+      // Editor & Syntax Background
+      'editor.background': c.bg,
+      'editor.foreground': c.fg,
+      'editorCursor.foreground': c.cursor,
+      'editor.lineHighlightBackground': c.bg_surface,
+      'editor.selectionBackground': `${c.bg_selection}B0`,
+      'editor.selectionHighlightBackground': `${c.bg_selection}60`,
+      'editor.wordHighlightBackground': `${c.bg_selection}80`,
+      'editor.wordHighlightStrongBackground': `${c.bg_selection}B0`,
+      'editor.findMatchBackground': `${c.semantic.primary}40`,
+      'editor.findMatchHighlightBackground': `${c.semantic.secondary}30`,
+      'editorLineNumber.foreground': c.fg_muted,
+      'editorLineNumber.activeForeground': c.fg,
+      'editorIndentGuide.background1': c.border,
+      'editorIndentGuide.activeBackground1': c.border_active,
+      'editorWhitespace.foreground': `${c.fg_muted}40`,
+      'editorLink.activeForeground': c.accents.cyan,
+      'editorError.foreground': c.semantic.danger,
+      'editorWarning.foreground': c.semantic.warning,
+      'editorInfo.foreground': c.semantic.info,
+
+      // Tabs
+      'editorGroupHeader.tabsBackground': c.bg_surface,
+      'tab.activeBackground': c.bg,
+      'tab.activeForeground': c.fg,
+      'tab.inactiveBackground': c.bg_surface,
+      'tab.inactiveForeground': c.fg_muted,
+      'tab.border': c.border,
+      'tab.activeBorder': c.border_active,
+
+      // Title Bar
+      'titleBar.activeBackground': c.bg_surface,
+      'titleBar.activeForeground': c.fg,
+      'titleBar.inactiveBackground': c.bg_surface,
+      'titleBar.inactiveForeground': c.fg_muted,
+      'titleBar.border': c.border,
+
+      // Status Bar
+      'statusBar.background': c.bg_surface,
+      'statusBar.foreground': c.fg_secondary,
+      'statusBar.border': c.border,
+      'statusBar.debuggingBackground': c.semantic.primary,
+      'statusBar.debuggingForeground': '#FFFFFF',
+      'statusBar.noFolderBackground': c.bg_surface,
+
+      // Popovers & Widgets
+      'editorWidget.background': c.bg_elevated,
+      'editorWidget.border': c.border,
+      'editorHoverWidget.background': c.bg_elevated,
+      'editorHoverWidget.border': c.border,
+      'dropdown.background': c.bg_elevated,
+      'dropdown.border': c.border,
+      'dropdown.foreground': c.fg,
+      'input.background': c.bg_elevated,
+      'input.border': c.border,
+      'input.foreground': c.fg,
+      'input.placeholderForeground': c.fg_muted,
+      'inputOption.activeBorder': c.semantic.primary,
+
+      // Lists & Trees
+      'list.activeSelectionBackground': c.bg_selection,
+      'list.activeSelectionForeground': c.fg,
+      'list.inactiveSelectionBackground': `${c.bg_selection}80`,
+      'list.inactiveSelectionForeground': c.fg,
+      'list.hoverBackground': `${c.bg_selection}50`,
+      'list.hoverForeground': c.fg,
+      'list.focusBackground': c.bg_selection,
+      'list.highlightForeground': c.semantic.primary,
+
+      // Scrollbar
+      'scrollbarSlider.background': `${c.fg_muted}30`,
+      'scrollbarSlider.hoverBackground': `${c.fg_muted}50`,
+      'scrollbarSlider.activeBackground': `${c.fg_muted}80`,
+
+      // Badges & Buttons
+      'badge.background': c.semantic.primary,
+      'badge.foreground': '#FFFFFF',
+      'button.background': c.semantic.primary,
+      'button.foreground': '#FFFFFF',
+      'button.hoverBackground': c.accents.mint,
+
+      // Git Decorations
+      'gitDecoration.modifiedResourceForeground': c.accents.pink,
+      'gitDecoration.deletedResourceForeground': c.accents.red,
+      'gitDecoration.untrackedResourceForeground': c.accents.mint,
+      'gitDecoration.ignoredResourceForeground': c.fg_muted,
+      'gitDecoration.conflictingResourceForeground': c.accents.yellow,
+
+      // Integrated Terminal
+      'terminal.background': c.bg,
+      'terminal.foreground': c.fg,
+      'terminal.ansiBlack': c.ansi.normal.black,
+      'terminal.ansiRed': c.ansi.normal.red,
+      'terminal.ansiGreen': c.ansi.normal.green,
+      'terminal.ansiYellow': c.ansi.normal.yellow,
+      'terminal.ansiBlue': c.ansi.normal.blue,
+      'terminal.ansiMagenta': c.ansi.normal.magenta,
+      'terminal.ansiCyan': c.ansi.normal.cyan,
+      'terminal.ansiWhite': c.ansi.normal.white,
+      'terminal.ansiBrightBlack': c.ansi.bright.black,
+      'terminal.ansiBrightRed': c.ansi.bright.red,
+      'terminal.ansiBrightGreen': c.ansi.bright.green,
+      'terminal.ansiBrightYellow': c.ansi.bright.yellow,
+      'terminal.ansiBrightBlue': c.ansi.bright.blue,
+      'terminal.ansiBrightMagenta': c.ansi.bright.magenta,
+      'terminal.ansiBrightCyan': c.ansi.bright.cyan,
+      'terminal.ansiBrightWhite': c.ansi.bright.white
+    },
+    tokenColors: [
+      {
+        name: 'Comments',
+        scope: ['comment', 'punctuation.definition.comment'],
+        settings: {
+          foreground: c.semantic.comment,
+          fontStyle: 'italic'
+        }
+      },
+      {
+        name: 'Keywords & Operators',
+        scope: ['keyword', 'keyword.control', 'keyword.operator.new', 'keyword.operator.expression'],
+        settings: {
+          foreground: c.semantic.keyword
+        }
+      },
+      {
+        name: 'Storage & Types',
+        scope: ['storage', 'storage.type', 'storage.modifier', 'support.type', 'entity.name.type'],
+        settings: {
+          foreground: c.semantic.type,
+          fontStyle: 'italic'
+        }
+      },
+      {
+        name: 'Functions & Methods',
+        scope: ['entity.name.function', 'support.function', 'variable.function', 'meta.function-call'],
+        settings: {
+          foreground: c.semantic.function
+        }
+      },
+      {
+        name: 'Strings & Template Expressions',
+        scope: ['string', 'string.template', 'punctuation.definition.string'],
+        settings: {
+          foreground: c.semantic.string
+        }
+      },
+      {
+        name: 'Numbers & Constants',
+        scope: ['constant.numeric', 'constant.language', 'constant.character', 'support.constant'],
+        settings: {
+          foreground: c.semantic.constant
+        }
+      },
+      {
+        name: 'Variables & Parameters',
+        scope: ['variable', 'variable.other', 'variable.parameter'],
+        settings: {
+          foreground: c.fg
+        }
+      },
+      {
+        name: 'HTML/JSX Tags',
+        scope: ['entity.name.tag', 'punctuation.definition.tag'],
+        settings: {
+          foreground: c.semantic.keyword
+        }
+      },
+      {
+        name: 'HTML/JSX Attributes',
+        scope: ['entity.other.attribute-name'],
+        settings: {
+          foreground: c.accents.yellow,
+          fontStyle: 'italic'
+        }
+      },
+      {
+        name: 'Punctuation & Delimiters',
+        scope: ['punctuation', 'punctuation.separator', 'punctuation.terminator', 'meta.brace'],
+        settings: {
+          foreground: c.fg_secondary
+        }
+      },
+      {
+        name: 'JSON/Object Keys',
+        scope: ['support.type.property-name', 'entity.name.tag.yaml', 'constant.other.object.key.js'],
+        settings: {
+          foreground: c.accents.cyan
+        }
+      }
+    ]
+  };
+
+  fs.writeFileSync(themePath, JSON.stringify(vsTheme, null, 2) + '\n');
+  vscodeThemesMeta.push({
+    label: flavor.name,
+    uiTheme: 'vs-dark',
+    path: `./themes/${themeFileName}`
+  });
+}
+
+// Generate VS Code Extension package.json
+const vscodePkg = {
+  name: 'axolotl-theme',
+  displayName: 'Axolotl Theme Suite',
+  description: 'True pitch black, abyssal navy, and velvet indigo themes featuring Wizard Mint, Sky Cyan, Electric Violet, and Natty Pink.',
+  version: '0.1.0',
+  publisher: 'kuddl',
+  author: 'Tobias Sailer',
+  icon: 'icon.png',
+  license: 'MIT',
+  repository: {
+    type: 'git',
+    url: 'https://github.com/kuddl/mystyle'
+  },
+  engines: {
+    vscode: '^1.70.0'
+  },
+  categories: ['Themes'],
+  keywords: ['theme', 'dark', 'axolotl', 'natty', 'snazzy', 'obsidian', 'arcane', 'mint'],
+  contributes: {
+    themes: vscodeThemesMeta
+  }
+};
+
+fs.writeFileSync(path.join(vscodeDir, 'package.json'), JSON.stringify(vscodePkg, null, 2) + '\n');
+
+const vscodeReadme = `# Axolotl Theme Suite for VS Code
+
+Die offizielle **Axolotl** Theme-Suite für Visual Studio Code.
+
+Beinhaltet alle 3 Flavors:
+- **Axolotl Obsidian:** True pitch-black (\`#09090B\`) mit leuchtendem Wizard Mint (\`#6AE5B5\`).
+- **Axolotl Natty:** Deep abyssal navy (\`#0C0E16\`) angelehnt an das legendäre Natty-Theme mit Natty Pink (\`#FF75B5\`).
+- **Axolotl Arcane:** Velvet Indigo (\`#0D0B14\`) mit Electric Violet (\`#7C4DFF\`) und Mint.
+
+## Schnelle lokale Installation
+
+Verlinke die Extension direkt in dein VS Code Extensions-Verzeichnis:
+\`\`\`bash
+ln -s "$(pwd)/ports/vscode" ~/.vscode/extensions/axolotl-theme
+\`\`\`
+
+Oder nutze das Axolotl CLI:
+\`\`\`bash
+./bin/axolotl apply vscode natty     # oder obsidian / arcane
+\`\`\`
+`;
+
+fs.writeFileSync(path.join(vscodeDir, 'README.md'), vscodeReadme);
+console.log('Generated VS Code extension for:', flavors.map((f) => f.name).join(', '));
+
+
 
 
