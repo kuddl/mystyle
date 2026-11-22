@@ -76,10 +76,13 @@ for (const flavor of flavors) {
   });
 
   const themesRaySoLink = `https://themes.ray.so?${query.toString()}`;
+  const raycastDeeplink = `raycast://theme?${query.toString()}`;
+
   raycastLinks.push({
     flavor,
     file: `${flavor.slug}.json`,
-    themesRaySoLink
+    themesRaySoLink,
+    raycastDeeplink
   });
 }
 
@@ -89,7 +92,7 @@ Alle 3 Flavors der **Axolotl** Theme-Suite für Raycast:
 
 ${raycastLinks
   .map(
-    ({ flavor, file, themesRaySoLink }) => `## ${flavor.name} (\`${file}\`)
+    ({ flavor, file, themesRaySoLink, raycastDeeplink }) => `## ${flavor.name} (\`${file}\`)
 ${flavor.description}
 
 - **Background**: \`${flavor.colors.bg}\` / \`${flavor.colors.bg_surface}\`
@@ -98,7 +101,8 @@ ${flavor.description}
 - **Pink**: \`${flavor.colors.accents.pink}\`
 - **Cyan**: \`${flavor.colors.accents.cyan}\`
 - **Violet**: \`${flavor.colors.accents.violet}\`
-- **Vorschau & 1-Klick Import (themes.ray.so)**: [In Raycast öffnen](${themesRaySoLink})
+- **1-Klick Direkt-Import in Raycast**: [\`${raycastDeeplink}\`](${raycastDeeplink})
+- **Web-Vorschau (themes.ray.so)**: [In Raycast Theme Studio öffnen](${themesRaySoLink})
 `
   )
   .join('\n')}
@@ -106,3 +110,99 @@ ${flavor.description}
 
 fs.writeFileSync(path.join(raycastDir, 'README.md'), raycastReadme);
 console.log('Generated Raycast themes for:', flavors.map((f) => f.name).join(', '));
+
+// Build Herdr Ports
+const herdrDir = path.join(portsDir, 'herdr');
+fs.mkdirSync(herdrDir, { recursive: true });
+
+const herdrSnippets = [];
+
+for (const flavor of flavors) {
+  const c = flavor.colors;
+  // Map Axolotl tokens to Herdr theme tokens:
+  // Herdr base theme = "catppuccin" or "dracula"
+  // Custom overrides:
+  // sidebar_bg: navigation sidebar background
+  // active_row_bg: highlighted item in sidebar
+  // selection_bg: selected area / row
+  // panel_bg: main terminal pane background (or reset for terminal passthrough)
+  // accent: active border / focus / primary highlight
+  // surface0 / surface1 / surface_dim / overlay0 / overlay1
+  // text / subtext0
+  // red / green / yellow / blue / mauve / peach / teal
+  const tomlSnippet = `# Herdr Theme: ${flavor.name}
+# Place or paste this into ~/.config/herdr/config.toml
+
+[theme]
+name = "catppuccin"
+auto_switch = false
+
+[theme.custom]
+sidebar_bg = "${c.bg_surface}"
+active_row_bg = "${c.bg_elevated}"
+selection_bg = "${c.bg_selection}"
+panel_bg = "${c.bg}"
+accent = "${c.semantic.primary}"
+text = "${c.fg}"
+subtext0 = "${c.fg_secondary}"
+surface_dim = "${c.bg_surface}"
+surface0 = "${c.bg_elevated}"
+surface1 = "${c.border}"
+overlay0 = "${c.fg_muted}"
+overlay1 = "${c.fg_secondary}"
+
+# Status & Accent Colors
+green = "${c.accents.mint}"
+red = "${c.accents.red}"
+yellow = "${c.accents.yellow}"
+blue = "${c.accents.cyan}"
+mauve = "${c.accents.violet}"
+peach = "${c.accents.orange}"
+teal = "${c.ansi.normal.cyan}"
+`;
+
+  const tomlFile = `${flavor.slug}.toml`;
+  fs.writeFileSync(path.join(herdrDir, tomlFile), tomlSnippet);
+
+  herdrSnippets.push({
+    flavor,
+    file: tomlFile,
+    tomlSnippet
+  });
+}
+
+const herdrReadme = `# Herdr Themes — Axolotl Suite
+
+Custom Themes für [Herdr](https://herdr.dev) (Terminal Workspace Manager für AI Coding Agents).
+
+## Installation
+
+Kopiere den gewünschten Block in deine Herdr-Konfigurationsdatei:
+\`\`\`bash
+~/.config/herdr/config.toml
+\`\`\`
+
+Danach kannst du die Konfiguration im laufenden Herdr-Server neuladen mit:
+\`\`\`bash
+herdr server reload-config
+\`\`\`
+*(oder in Herdr über \`<prefix> + Shift + R\`)*
+
+---
+
+${herdrSnippets
+  .map(
+    ({ flavor, file, tomlSnippet }) => `### ${flavor.name} (\`${file}\`)
+*${flavor.description}*
+
+\`\`\`toml
+${tomlSnippet.trim()}
+\`\`\`
+`
+  )
+  .join('\n---\n\n')}
+`;
+
+fs.writeFileSync(path.join(herdrDir, 'README.md'), herdrReadme);
+console.log('Generated Herdr themes for:', flavors.map((f) => f.name).join(', '));
+

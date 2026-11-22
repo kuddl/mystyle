@@ -1,0 +1,29 @@
+# Herdr Theme: Axolotl Arcane
+# Place or paste this into ~/.config/herdr/config.toml
+
+[theme]
+name = "catppuccin"
+auto_switch = false
+
+[theme.custom]
+sidebar_bg = "#161324"
+active_row_bg = "#1E1930"
+selection_bg = "#281E42"
+panel_bg = "#0D0B14"
+accent = "#7C4DFF"
+text = "#F0EEFF"
+subtext0 = "#CFCBE2"
+surface_dim = "#161324"
+surface0 = "#1E1930"
+surface1 = "#2A2440"
+overlay0 = "#746E96"
+overlay1 = "#CFCBE2"
+
+# Status & Accent Colors
+green = "#72F1B8"
+red = "#FF6384"
+yellow = "#FFE699"
+blue = "#68C3F8"
+mauve = "#7C4DFF"
+peach = "#FFAB70"
+teal = "#7EE2ED"

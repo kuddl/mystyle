@@ -1,0 +1,29 @@
+# Herdr Theme: Axolotl Obsidian
+# Place or paste this into ~/.config/herdr/config.toml
+
+[theme]
+name = "catppuccin"
+auto_switch = false
+
+[theme.custom]
+sidebar_bg = "#121217"
+active_row_bg = "#191922"
+selection_bg = "#221D3A"
+panel_bg = "#09090B"
+accent = "#6AE5B5"
+text = "#F4F4F6"
+subtext0 = "#A1A1AA"
+surface_dim = "#121217"
+surface0 = "#191922"
+surface1 = "#23232E"
+overlay0 = "#6E7185"
+overlay1 = "#A1A1AA"
+
+# Status & Accent Colors
+green = "#6AE5B5"
+red = "#FF5C77"
+yellow = "#F3F99D"
+blue = "#56B7EC"
+mauve = "#5E26F6"
+peach = "#FFA666"
+teal = "#5ECAD6"

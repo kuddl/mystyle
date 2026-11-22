@@ -1,0 +1,142 @@
+#!/usr/bin/env node
+import fs from 'node:fs';
+import path from 'node:path';
+import os from 'node:os';
+import { execSync } from 'node:child_process';
+import { fileURLToPath } from 'node:url';
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const rootDir = path.resolve(__dirname, '..');
+const portsDir = path.join(rootDir, 'ports');
+
+const args = process.argv.slice(2);
+const command = args[0];
+
+function printHelp() {
+  console.log(`
+🦎 Axolotl CLI — Apply themes to your local tools
+
+Usage:
+  axolotl list                   List supported apps and flavors
+  axolotl build                  Run theme generator for all ports
+  axolotl apply herdr <flavor>   Apply theme to ~/.config/herdr/config.toml
+  axolotl open raycast <flavor>  Trigger 1-click import into Raycast
+
+Available Flavors:
+  - obsidian (default)
+  - natty
+  - arcane
+`);
+}
+
+if (!command || command === 'help' || command === '--help') {
+  printHelp();
+  process.exit(0);
+}
+
+if (command === 'list') {
+  console.log(`
+🎨 Axolotl Flavors:
+  • obsidian  (Axolotl Obsidian — Pitch Black & Wizard Mint)
+  • natty     (Axolotl Natty — Abyssal Navy & Natty Pink)
+  • arcane    (Axolotl Arcane — Velvet Indigo & Electric Violet)
+
+📦 Supported Ports:
+  • raycast   (ports/raycast)
+  • herdr     (ports/herdr)
+`);
+  process.exit(0);
+}
+
+if (command === 'build') {
+  console.log('Building all ports...');
+  execSync(`node "${path.join(rootDir, 'generator', 'build.mjs')}"`, { stdio: 'inherit' });
+  process.exit(0);
+}
+
+if (command === 'apply' || command === 'open') {
+  const targetApp = args[1];
+  const flavor = (args[2] || 'obsidian').toLowerCase();
+
+  const validFlavors = ['obsidian', 'natty', 'arcane'];
+  if (!validFlavors.includes(flavor)) {
+    console.error(`❌ Invalid flavor: "${flavor}". Choose one of: ${validFlavors.join(', ')}`);
+    process.exit(1);
+  }
+
+  if (targetApp === 'herdr') {
+    applyHerdr(flavor);
+  } else if (targetApp === 'raycast') {
+    openRaycast(flavor);
+  } else {
+    console.error(`❌ Unknown app: "${targetApp}". Run "axolotl list" for available ports.`);
+    process.exit(1);
+  }
+} else {
+  console.error(`❌ Unknown command: "${command}"`);
+  printHelp();
+  process.exit(1);
+}
+
+function applyHerdr(flavor) {
+  const configPath = path.join(os.homedir(), '.config', 'herdr', 'config.toml');
+  const sourceSnippetPath = path.join(portsDir, 'herdr', `axolotl-${flavor}.toml`);
+
+  if (!fs.existsSync(sourceSnippetPath)) {
+    console.error(`❌ Theme snippet not found at: ${sourceSnippetPath}`);
+    process.exit(1);
+  }
+
+  const snippet = fs.readFileSync(sourceSnippetPath, 'utf8');
+
+  if (!fs.existsSync(configPath)) {
+    fs.mkdirSync(path.dirname(configPath), { recursive: true });
+    fs.writeFileSync(configPath, snippet);
+    console.log(`✅ Created ${configPath} with Axolotl ${flavor}!`);
+  } else {
+    let existing = fs.readFileSync(configPath, 'utf8');
+
+    // Remove existing [theme] and [theme.custom] sections
+    // Match from [theme] until either next top-level [section] (not [theme.*]) or end of file
+    const themeRegex = /\[theme\][\s\S]*?(?=\n\[(?!theme)[a-zA-Z0-9_.-]+\]|$)/;
+
+    let updated;
+    if (themeRegex.test(existing)) {
+      updated = existing.replace(themeRegex, snippet.trim());
+    } else {
+      updated = existing.trim() + '\n\n' + snippet.trim() + '\n';
+    }
+
+    fs.writeFileSync(configPath, updated);
+    console.log(`✅ Updated ${configPath} with Axolotl ${flavor}!`);
+  }
+
+  // Reload Herdr if server is running
+  try {
+    execSync('herdr server reload-config', { stdio: 'pipe' });
+    console.log('🔄 Herdr server reloaded config successfully!');
+  } catch {
+    console.log('ℹ️ Herdr server is not currently running. Changes will apply on next launch.');
+  }
+}
+
+function openRaycast(flavor) {
+  const raycastReadme = fs.readFileSync(path.join(portsDir, 'raycast', 'README.md'), 'utf8');
+  const regex = new RegExp(`\\[\\x60(raycast:\\/\\/theme\\?[^\\x60]+)\\x60\\]`, 'g');
+  const links = [];
+  let m;
+  while ((m = regex.exec(raycastReadme)) !== null) {
+    links.push(m[1]);
+  }
+
+  const flavorIndex = { obsidian: 0, natty: 1, arcane: 2 }[flavor];
+  const deeplink = links[flavorIndex];
+
+  if (!deeplink) {
+    console.error(`❌ Could not resolve deeplink for ${flavor}`);
+    process.exit(1);
+  }
+
+  console.log(`🚀 Opening Raycast import for Axolotl ${flavor}...`);
+  execSync(`open "${deeplink}"`);
+}

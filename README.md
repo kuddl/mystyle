@@ -30,6 +30,41 @@ Alle drei Themes können mit einem einzigen Klick oder Terminal-Befehl importier
 | **Axolotl Natty** | [Direkt in Raycast importieren](raycast://theme?version=1&name=Axolotl+Natty&author=Tobias+Sailer&appearance=dark&colors=%230C0E16%2C%23141824%2C%23EEFFFF%2C%23FF75B5%2C%235AF78E%2C%23FF5C57%2C%23FFB86C%2C%23F3F99D%2C%235AF78E%2C%2389DDFF%2C%237C3AED%2C%23FF75B5) | [themes.ray.so Preview](https://themes.ray.so?version=1&name=Axolotl+Natty&author=Tobias+Sailer&appearance=dark&colors=%230C0E16%2C%23141824%2C%23EEFFFF%2C%23FF75B5%2C%235AF78E%2C%23FF5C57%2C%23FFB86C%2C%23F3F99D%2C%235AF78E%2C%2389DDFF%2C%237C3AED%2C%23FF75B5) |
 | **Axolotl Arcane** | [Direkt in Raycast importieren](raycast://theme?version=1&name=Axolotl+Arcane&author=Tobias+Sailer&appearance=dark&colors=%230D0B14%2C%23161324%2C%23F0EEFF%2C%237C4DFF%2C%2372F1B8%2C%23FF6384%2C%23FFAB70%2C%23FFE699%2C%2372F1B8%2C%2368C3F8%2C%237C4DFF%2C%23FF85B8) | [themes.ray.so Preview](https://themes.ray.so?version=1&name=Axolotl+Arcane&author=Tobias+Sailer&appearance=dark&colors=%230D0B14%2C%23161324%2C%23F0EEFF%2C%237C4DFF%2C%2372F1B8%2C%23FF6384%2C%23FFAB70%2C%23FFE699%2C%2372F1B8%2C%2368C3F8%2C%237C4DFF%2C%23FF85B8) |
 
+### 2. Herdr (Terminal Workspace Manager)
+Konfiguration für `~/.config/herdr/config.toml`:
+
+```toml
+[theme]
+name = "catppuccin"
+auto_switch = false
+
+[theme.custom]
+sidebar_bg = "#121217"
+active_row_bg = "#191922"
+selection_bg = "#221D3A"
+panel_bg = "#09090B"
+accent = "#6AE5B5"
+text = "#F4F4F6"
+subtext0 = "#A1A1AA"
+surface_dim = "#121217"
+surface0 = "#191922"
+surface1 = "#23232E"
+overlay0 = "#6E7185"
+overlay1 = "#A1A1AA"
+green = "#6AE5B5"
+red = "#FF5C77"
+yellow = "#F3F99D"
+blue = "#56B7EC"
+mauve = "#5E26F6"
+peach = "#FFA666"
+teal = "#5ECAD6"
+```
+
+*Oder per CLI direkt anwenden:*
+\`\`\`bash
+./bin/axolotl apply herdr obsidian
+\`\`\`
+
 *Tipp fürs Terminal:*
 ```bash
 open "raycast://theme?version=1&name=Axolotl+Obsidian&author=Tobias+Sailer&appearance=dark&colors=%2309090B,%23121217,%23F4F4F6,%236AE5B5,%236AE5B5,%23FF5C77,%23FFA666,%23F3F99D,%236AE5B5,%2356B7EC,%235E26F6,%23FF85B8"
@@ -63,12 +98,8 @@ node generator/build.mjs
 Angelehnt an die modulare Struktur bekannter Theme-Ökosysteme (wie Dracula / Catppuccin):
 
 - [x] **Raycast** (`ports/raycast/`) – Alle 3 Flavors mit 1-Klick-Import
+- [x] **Herdr** (`ports/herdr/`) – CLI / TUI Custom Theme Configs (Obsidian, Natty, Arcane)
 - [ ] **Ghostty** (`ports/ghostty/`) – Terminal-Themes + Font-Profile
-- [ ] **VS Code** (`ports/vscode/`) – Extension-Paket mit allen 3 Themes
-- [ ] **Pi Coding Agent** (`ports/pi/`) – Custom TUI Theme
-- [ ] **Lazygit** (`ports/lazygit/`) – Farb-Snippets für `.config/lazygit/config.yml`
-- [ ] **Lazydocker** (`ports/lazydocker/`) – Theme-Snippets
-- [ ] **Herdr** (`ports/herdr/`) – CLI / TUI Farbanpassung
 - [ ] **Webseite / Showcase** (`docs/` oder `web/`) – Statische Landing-Page im Dracula/Linear-Style mit Copy-Paste & Installationsanleitungen
 
 ---
