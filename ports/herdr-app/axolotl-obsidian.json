@@ -1,6 +1,6 @@
 {
   "background": "#09090B",
-  "foreground": "#F4F4F6",
+  "foreground": "#B8B8C2",
   "selection": "#221D3A",
   "cursor": "#6AE5B5",
   "ansi": [
@@ -19,11 +19,11 @@
     "#78C8F5",
     "#FFA3CA",
     "#7EE2ED",
-    "#FFFFFF"
+    "#B8B8C2"
   ],
   "colors": {
     "background": "#09090B",
-    "foreground": "#F4F4F6",
+    "foreground": "#B8B8C2",
     "canvas": "#070708",
     "chrome": "#121217",
     "surface": "#121217",

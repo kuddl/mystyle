@@ -11,8 +11,8 @@
     "bg_selection": "#281E42",
     "border": "#2A2440",
     "border_active": "#7C4DFF",
-    "fg": "#F0EEFF",
-    "fg_secondary": "#CFCBE2",
+    "fg": "#BCB8CE",
+    "fg_secondary": "#9E99B5",
     "fg_muted": "#746E96",
     "cursor": "#72F1B8",
     "accents": {
@@ -59,7 +59,7 @@
         "blue": "#8AD2FA",
         "magenta": "#FFA3CA",
         "cyan": "#9BEBF4",
-        "white": "#F0EEFF"
+        "white": "#BCB8CE"
       }
     }
   }

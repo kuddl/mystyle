@@ -3,20 +3,20 @@
   "type": "dark",
   "colors": {
     "activityBar.background": "#161324",
-    "activityBar.foreground": "#F0EEFF",
+    "activityBar.foreground": "#BCB8CE",
     "activityBar.inactiveForeground": "#746E96",
     "activityBar.border": "#2A2440",
     "activityBarBadge.background": "#7C4DFF",
     "activityBarBadge.foreground": "#FFFFFF",
     "sideBar.background": "#161324",
-    "sideBar.foreground": "#CFCBE2",
+    "sideBar.foreground": "#9E99B5",
     "sideBar.border": "#2A2440",
-    "sideBarTitle.foreground": "#F0EEFF",
+    "sideBarTitle.foreground": "#BCB8CE",
     "sideBarSectionHeader.background": "#161324",
-    "sideBarSectionHeader.foreground": "#F0EEFF",
+    "sideBarSectionHeader.foreground": "#BCB8CE",
     "sideBarSectionHeader.border": "#2A2440",
     "editor.background": "#0D0B14",
-    "editor.foreground": "#F0EEFF",
+    "editor.foreground": "#BCB8CE",
     "editorCursor.foreground": "#72F1B8",
     "editor.lineHighlightBackground": "#161324",
     "editor.selectionBackground": "#281E42B0",
@@ -26,7 +26,7 @@
     "editor.findMatchBackground": "#7C4DFF40",
     "editor.findMatchHighlightBackground": "#72F1B830",
     "editorLineNumber.foreground": "#746E96",
-    "editorLineNumber.activeForeground": "#F0EEFF",
+    "editorLineNumber.activeForeground": "#BCB8CE",
     "editorIndentGuide.background1": "#2A2440",
     "editorIndentGuide.activeBackground1": "#7C4DFF",
     "editorWhitespace.foreground": "#746E9640",
@@ -36,18 +36,18 @@
     "editorInfo.foreground": "#68C3F8",
     "editorGroupHeader.tabsBackground": "#161324",
     "tab.activeBackground": "#0D0B14",
-    "tab.activeForeground": "#F0EEFF",
+    "tab.activeForeground": "#BCB8CE",
     "tab.inactiveBackground": "#161324",
     "tab.inactiveForeground": "#746E96",
     "tab.border": "#2A2440",
     "tab.activeBorder": "#7C4DFF",
     "titleBar.activeBackground": "#161324",
-    "titleBar.activeForeground": "#F0EEFF",
+    "titleBar.activeForeground": "#BCB8CE",
     "titleBar.inactiveBackground": "#161324",
     "titleBar.inactiveForeground": "#746E96",
     "titleBar.border": "#2A2440",
     "statusBar.background": "#161324",
-    "statusBar.foreground": "#CFCBE2",
+    "statusBar.foreground": "#9E99B5",
     "statusBar.border": "#2A2440",
     "statusBar.debuggingBackground": "#7C4DFF",
     "statusBar.debuggingForeground": "#FFFFFF",
@@ -58,18 +58,18 @@
     "editorHoverWidget.border": "#2A2440",
     "dropdown.background": "#1E1930",
     "dropdown.border": "#2A2440",
-    "dropdown.foreground": "#F0EEFF",
+    "dropdown.foreground": "#BCB8CE",
     "input.background": "#1E1930",
     "input.border": "#2A2440",
-    "input.foreground": "#F0EEFF",
+    "input.foreground": "#BCB8CE",
     "input.placeholderForeground": "#746E96",
     "inputOption.activeBorder": "#7C4DFF",
     "list.activeSelectionBackground": "#281E42",
-    "list.activeSelectionForeground": "#F0EEFF",
+    "list.activeSelectionForeground": "#BCB8CE",
     "list.inactiveSelectionBackground": "#281E4280",
-    "list.inactiveSelectionForeground": "#F0EEFF",
+    "list.inactiveSelectionForeground": "#BCB8CE",
     "list.hoverBackground": "#281E4250",
-    "list.hoverForeground": "#F0EEFF",
+    "list.hoverForeground": "#BCB8CE",
     "list.focusBackground": "#281E42",
     "list.highlightForeground": "#7C4DFF",
     "scrollbarSlider.background": "#746E9630",
@@ -86,7 +86,7 @@
     "gitDecoration.ignoredResourceForeground": "#746E96",
     "gitDecoration.conflictingResourceForeground": "#FFE699",
     "terminal.background": "#0D0B14",
-    "terminal.foreground": "#F0EEFF",
+    "terminal.foreground": "#BCB8CE",
     "terminal.ansiBlack": "#0D0B14",
     "terminal.ansiRed": "#FF6384",
     "terminal.ansiGreen": "#72F1B8",
@@ -102,7 +102,7 @@
     "terminal.ansiBrightBlue": "#8AD2FA",
     "terminal.ansiBrightMagenta": "#FFA3CA",
     "terminal.ansiBrightCyan": "#9BEBF4",
-    "terminal.ansiBrightWhite": "#F0EEFF"
+    "terminal.ansiBrightWhite": "#BCB8CE"
   },
   "tokenColors": [
     {
@@ -185,7 +185,7 @@
         "variable.parameter"
       ],
       "settings": {
-        "foreground": "#F0EEFF"
+        "foreground": "#BCB8CE"
       }
     },
     {
@@ -217,7 +217,7 @@
         "meta.brace"
       ],
       "settings": {
-        "foreground": "#CFCBE2"
+        "foreground": "#9E99B5"
       }
     },
     {

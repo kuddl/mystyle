@@ -224,8 +224,7 @@ function applyVSCode(flavor) {
     fs.cpSync(srcExt, extDir, { recursive: true });
   }
 
-  // Update VS Code User settings.json
-  const settingsPath = path.join(os.homedir(), 'Library', 'Application Support', 'Code', 'User', 'settings.json');
+  // Update VS Code User settings.json and any profile settings.json
   const themeLabelMap = {
     obsidian: 'Axolotl Obsidian',
     natty: 'Axolotl Natty',
@@ -234,24 +233,37 @@ function applyVSCode(flavor) {
 
   const themeLabel = themeLabelMap[flavor];
 
-  if (fs.existsSync(settingsPath)) {
-    try {
-      const content = fs.readFileSync(settingsPath, 'utf8');
-      let updated;
-      if (content.includes('"workbench.colorTheme"')) {
-        updated = content.replace(/"workbench\.colorTheme"\s*:\s*"[^"]*"/, `"workbench.colorTheme": "${themeLabel}"`);
-      } else {
-        const lastBrace = content.lastIndexOf('}');
-        if (lastBrace !== -1) {
-          updated = content.slice(0, lastBrace).trimEnd() + `,\n  "workbench.colorTheme": "${themeLabel}"\n}\n`;
+  const candidateSettings = [
+    path.join(os.homedir(), 'Library', 'Application Support', 'Code', 'User', 'settings.json')
+  ];
+
+  const profilesDir = path.join(os.homedir(), 'Library', 'Application Support', 'Code', 'User', 'profiles');
+  if (fs.existsSync(profilesDir)) {
+    for (const p of fs.readdirSync(profilesDir)) {
+      candidateSettings.push(path.join(profilesDir, p, 'settings.json'));
+    }
+  }
+
+  for (const settingsPath of candidateSettings) {
+    if (fs.existsSync(settingsPath)) {
+      try {
+        const content = fs.readFileSync(settingsPath, 'utf8');
+        let updated;
+        if (content.includes('"workbench.colorTheme"')) {
+          updated = content.replace(/"workbench\.colorTheme"\s*:\s*"[^"]*"/, `"workbench.colorTheme": "${themeLabel}"`);
+        } else {
+          const lastBrace = content.lastIndexOf('}');
+          if (lastBrace !== -1) {
+            updated = content.slice(0, lastBrace).trimEnd() + `,\n  "workbench.colorTheme": "${themeLabel}"\n}\n`;
+          }
         }
+        if (updated) {
+          fs.writeFileSync(settingsPath, updated);
+          console.log(`✅ Set "workbench.colorTheme": "${themeLabel}" in ${settingsPath}`);
+        }
+      } catch (err) {
+        console.warn(`⚠️ Could not update ${settingsPath}: ${err.message}`);
       }
-      if (updated) {
-        fs.writeFileSync(settingsPath, updated);
-        console.log(`✅ Set "workbench.colorTheme": "${themeLabel}" in VS Code settings!`);
-      }
-    } catch (err) {
-      console.warn(`⚠️ Could not update VS Code settings.json automatically: ${err.message}`);
     }
   }
 
