@@ -3,6 +3,7 @@
   "name": "axolotl-natty",
   "appearance": "dark",
   "vars": {
+    "accent": "#FF75B5",
     "bg": "#0C0E16",
     "bg_surface": "#141824",
     "bg_elevated": "#1C2233",

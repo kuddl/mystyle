@@ -3,6 +3,7 @@
   "name": "axolotl-arcane",
   "appearance": "dark",
   "vars": {
+    "accent": "#7C4DFF",
     "bg": "#0D0B14",
     "bg_surface": "#161324",
     "bg_elevated": "#1E1930",

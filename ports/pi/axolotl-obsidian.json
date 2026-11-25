@@ -3,6 +3,7 @@
   "name": "axolotl-obsidian",
   "appearance": "dark",
   "vars": {
+    "accent": "#6AE5B5",
     "bg": "#09090B",
     "bg_surface": "#121217",
     "bg_elevated": "#191922",
